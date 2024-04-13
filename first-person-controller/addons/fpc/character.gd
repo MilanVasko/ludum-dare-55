@@ -11,7 +11,8 @@ extends CharacterBody3D
 @export var jump_velocity : float = 4.5
 @export var mouse_sensitivity : float = 0.1
 @export var immobile : bool = false
-@export_file var default_reticle
+@export_file var dot_reticle
+@export_file var hand_reticle
 
 @export var initial_facing_direction : Vector3 = Vector3.ZERO
 
@@ -53,6 +54,8 @@ extends CharacterBody3D
 @export var view_bobbing : bool = true
 @export var jump_animation : bool = true
 
+@onready var hand_raycast: RayCast3D = $Head/Camera/RayCast3D
+
 # Member variables
 var speed : float = base_speed
 var current_speed : float = 0.0
@@ -60,6 +63,8 @@ var current_speed : float = 0.0
 var state : String = "normal"
 var low_ceiling : bool = false # This is for when the cieling is too low and the player needs to crouch.
 var was_on_floor : bool = true
+
+var current_interactable_object: Node = null
 
 var RETICLE : Control
 
@@ -74,8 +79,8 @@ func _ready():
 	if initial_facing_direction:
 		HEAD.set_rotation_degrees(initial_facing_direction) # I don't want to be calling this function if the vector is zero
 
-	if default_reticle:
-		change_reticle(default_reticle)
+	if dot_reticle:
+		change_reticle(dot_reticle)
 
 	# Reset the camera position
 	HEADBOB_ANIMATION.play("RESET")
@@ -91,8 +96,29 @@ func change_reticle(reticle):
 	RETICLE.character = self
 	$UserInterface.add_child(RETICLE)
 
+func update_reticle_if_necessary(new_interactable_object: Node):
+	if new_interactable_object != current_interactable_object:
+		current_interactable_object = new_interactable_object
+		if new_interactable_object != null:
+			change_reticle(hand_reticle)
+		else:
+			change_reticle(dot_reticle)
+
+func find_interactable_object() -> Node:
+	var collider: Node = hand_raycast.get_collider()
+	if collider == null:
+		return null
+	if collider.is_in_group("interactable") && collider.has_method("_interact"):
+		return collider
+	return null
 
 func _physics_process(delta):
+	var new_interactable_object := find_interactable_object()
+	update_reticle_if_necessary(new_interactable_object)
+	if new_interactable_object != null:
+		if Input.is_action_just_pressed("interact"):
+			new_interactable_object._interact()
+
 	current_speed = Vector3.ZERO.distance_to(get_real_velocity())
 
 	# Gravity
