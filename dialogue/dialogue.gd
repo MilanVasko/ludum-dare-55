@@ -1,24 +1,32 @@
 extends Panel
 
+signal dialogue_started(dialogue_name: String)
+signal dialogue_ended(dialogue_name: String)
+
 func _ready() -> void:
 	visible = false
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact") and Global.is_player_frozen():
+func _input(event: InputEvent) -> void:
+	if !visible:
+		return
+	get_viewport().set_input_as_handled()
+	if event.is_action_pressed("interact"):
 		continue_dialogue()
 
-func start_dialogue_mode() -> void:
-	Global.freeze_player()
+func start_dialogue(dialogue_name: String) -> void:
 	visible = true
+	emit_signal("dialogue_started", dialogue_name)
 
-func end_dialogue_mode() -> void:
-	Global.unfreeze_player()
+func end_dialogue(dialogue_name: String) -> void:
 	visible = false
+	emit_signal("dialogue_ended", dialogue_name)
 
-func play_dialogue_from_start(dialogue_node: String) -> void:
-	start_dialogue_mode()
+func play_dialogue_from_start(dialogue_name: String) -> void:
+	start_dialogue(dialogue_name)
+	var found := false
 	for child in get_children():
-		if child.name == dialogue_node:
+		if child.name == dialogue_name:
+			found = true
 			var first := true
 			for inner_child in child.get_children():
 				inner_child.visible = first
@@ -26,6 +34,7 @@ func play_dialogue_from_start(dialogue_node: String) -> void:
 			child.visible = true
 		else:
 			child.visible = false
+	assert(found, "Dialogue \"" + dialogue_name + "\" not found")
 
 func continue_dialogue() -> void:
 	for child in get_children():
@@ -43,6 +52,6 @@ func continue_dialogue() -> void:
 				return
 		if show_next:
 			# We got to the end of the dialogue
-			end_dialogue_mode()
+			end_dialogue(child.name)
 			return
 	assert(false, "There is no active dialogue!")

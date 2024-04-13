@@ -12,7 +12,7 @@ offset_right = -0.399963
 offset_bottom = 200.0
 script = ExtResource("1_q7wh4")
 
-[node name="Intro" type="Control" parent="."]
+[node name="DemonsArrived" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,15 +20,27 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="1" parent="Intro" instance=ExtResource("2_skytx")]
+[node name="1" parent="DemonsArrived" instance=ExtResource("2_skytx")]
 layout_mode = 1
-text = "Intro text 1"
+text = "DEMON 1:
+Guys, guys, let's try that."
 
-[node name="2" parent="Intro" instance=ExtResource("2_skytx")]
+[node name="2" parent="DemonsArrived" instance=ExtResource("2_skytx")]
 layout_mode = 1
-text = "Intro text 2"
+text = "DEMON 2:
+I don't think it's a good idea..."
 
-[node name="Test" type="Control" parent="."]
+[node name="3" parent="DemonsArrived" instance=ExtResource("2_skytx")]
+layout_mode = 1
+text = "DEMON 1:
+C'mon, don't be a party pooper. It's gonna be fun."
+
+[node name="4" parent="DemonsArrived" instance=ExtResource("2_skytx")]
+layout_mode = 1
+text = "DEMON 3:
+Let's do it. Nothing is gonna happen anyway."
+
+[node name="DemonsSummoning" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,6 +48,35 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="1" parent="Test" instance=ExtResource("2_skytx")]
+[node name="1" parent="DemonsSummoning" instance=ExtResource("2_skytx")]
 layout_mode = 1
-text = "Test text"
+text = "DEMONS:
+Hu-man! Hu-man! Hu-man!"
+
+[node name="JustSummoned" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" parent="JustSummoned" instance=ExtResource("2_skytx")]
+layout_mode = 1
+text = "YOU:
+What..."
+
+[node name="2" parent="JustSummoned" instance=ExtResource("2_skytx")]
+layout_mode = 1
+text = "DEMON 2:
+Oh no! I was right!"
+
+[node name="3" parent="JustSummoned" instance=ExtResource("2_skytx")]
+layout_mode = 1
+text = "Demon 1:
+I think I drank too much today..."
+
+[node name="4" parent="JustSummoned" instance=ExtResource("2_skytx")]
+layout_mode = 1
+text = "DEMON 3:
+Human, sick!"
