@@ -37,3 +37,11 @@ func require_dialogue() -> Node:
 
 func find_dialogue_or_null() -> Node:
 	return get_tree().get_first_node_in_group("dialogue")
+
+func require_inventory() -> Node:
+	var inventory := find_inventory_or_null()
+	assert(inventory != null, "Inventory not found")
+	return inventory
+
+func find_inventory_or_null() -> Node:
+	return get_tree().get_first_node_in_group("inventory")

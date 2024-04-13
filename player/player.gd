@@ -119,9 +119,13 @@ func update_reticle_if_necessary(new_interactable_object: Node):
 
 func find_interactable_object() -> Node:
 	var collider: Node = hand_raycast.get_collider()
-	if collider == null:
+	if collider == null || collider.is_queued_for_deletion():
 		return null
 	if collider.is_in_group("interactable") && collider.has_method("_interact"):
+		if collider.has_method("_can_interact"):
+			if collider._can_interact():
+				return collider
+			return null
 		return collider
 	return null
 
@@ -131,6 +135,7 @@ func _physics_process(delta: float) -> void:
 	if new_interactable_object != null:
 		if Input.is_action_just_pressed("interact") and !immobile:
 			new_interactable_object._interact()
+			call_deferred("update_reticle", find_interactable_object())
 
 	current_speed = Vector3.ZERO.distance_to(get_real_velocity())
 
@@ -309,3 +314,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and !immobile:
 		HEAD.rotation_degrees.y -= event.relative.x * mouse_sensitivity
 		HEAD.rotation_degrees.x -= event.relative.y * mouse_sensitivity
+
+func pick_up_plant() -> void:
+	Global.require_inventory().add_plant()
