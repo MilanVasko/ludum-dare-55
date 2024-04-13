@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwkgjdjsthqh0"]
+
+[ext_resource type="Script" path="res://pamphlet/pamphlet.gd" id="1_6u0f5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wqmvu"]
+albedo_color = Color(0, 1, 0.0470588, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hivnb"]
+size = Vector3(0.15, 0.01, 0.3)
+
+[node name="Pamphlet" type="StaticBody3D" groups=["interactable"]]
+script = ExtResource("1_6u0f5")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+size = Vector3(0.15, 0.01, 0.3)
+material = SubResource("StandardMaterial3D_wqmvu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_hivnb")

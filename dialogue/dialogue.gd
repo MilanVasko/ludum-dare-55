@@ -1,4 +1,4 @@
-extends Panel
+extends Control
 
 signal dialogue_started(dialogue_name: String)
 signal dialogue_ended(dialogue_name: String)

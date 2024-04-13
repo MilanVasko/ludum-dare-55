@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://dlppbinr1xnif"]
+[gd_scene load_steps=13 format=3 uid="uid://dlppbinr1xnif"]
 
 [ext_resource type="PackedScene" uid="uid://ce3aat668j4ib" path="res://demon/demon.tscn" id="2_w3v6w"]
 [ext_resource type="PackedScene" uid="uid://cddipiraa3s0k" path="res://dialogue/dialogue.tscn" id="3_d8vpw"]
 [ext_resource type="PackedScene" uid="uid://c2txtr2som7sk" path="res://dorms/dorms.tscn" id="3_edpwd"]
 [ext_resource type="PackedScene" uid="uid://c6j478r8yurra" path="res://player/player.tscn" id="3_mj1x0"]
 [ext_resource type="Script" path="res://intro/intro.gd" id="4_nwsjy"]
+[ext_resource type="PackedScene" uid="uid://dwkgjdjsthqh0" path="res://pamphlet/pamphlet.tscn" id="6_g0mvp"]
 
 [sub_resource type="Animation" id="Animation_sfhjn"]
 length = 0.001
@@ -259,6 +260,9 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.0819
 
 [node name="Demon" parent="." instance=ExtResource("2_w3v6w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.57133, 0, 3.46655)
+
+[node name="Pamphlet" parent="." instance=ExtResource("6_g0mvp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.63847, 0, 12.3339)
 
 [connection signal="dialogue_ended" from="CanvasLayer/Dialogue" to="Intro" method="_on_dialogue_ended"]
 [connection signal="animation_finished" from="Intro/AnimationPlayer" to="Intro" method="_on_animation_finished"]

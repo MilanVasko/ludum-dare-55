@@ -3,18 +3,19 @@
 [ext_resource type="Script" path="res://dialogue/dialogue.gd" id="1_q7wh4"]
 [ext_resource type="PackedScene" uid="uid://ds5807uiaujbj" path="res://dialogue-text/dialogue-text.tscn" id="2_skytx"]
 
-[node name="Dialogue" type="Panel" groups=["dialogue"]]
-anchors_preset = -1
-anchor_left = 0.3
-anchor_right = 0.7
-offset_left = 0.399994
-offset_right = -0.399963
-offset_bottom = 200.0
+[node name="Dialogue" type="Control" groups=["dialogue"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_q7wh4")
 
-[node name="DemonsArrived" type="Control" parent="."]
+[node name="DemonsArrived" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.8
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -22,7 +23,6 @@ grow_vertical = 2
 
 [node name="1" parent="DemonsArrived" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -32,7 +32,6 @@ Guys, guys, let's try that."
 
 [node name="2" parent="DemonsArrived" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -42,7 +41,6 @@ I don't think it's a good idea..."
 
 [node name="3" parent="DemonsArrived" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -52,7 +50,6 @@ C'mon, don't be a party pooper. It's gonna be fun."
 
 [node name="4" parent="DemonsArrived" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -60,9 +57,10 @@ offset_bottom = 0.0
 text = "DEMON 3:
 Let's do it. Nothing is gonna happen anyway."
 
-[node name="DemonsSummoning" type="Control" parent="."]
+[node name="DemonsSummoning" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.8
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -70,7 +68,6 @@ grow_vertical = 2
 
 [node name="1" parent="DemonsSummoning" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -78,9 +75,10 @@ offset_bottom = 0.0
 text = "DEMONS:
 Hu-man! Hu-man! Hu-man!"
 
-[node name="JustSummoned" type="Control" parent="."]
+[node name="JustSummoned" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.8
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -88,7 +86,6 @@ grow_vertical = 2
 
 [node name="1" parent="JustSummoned" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -98,7 +95,6 @@ What..."
 
 [node name="2" parent="JustSummoned" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -108,7 +104,6 @@ Oh no! I was right!"
 
 [node name="3" parent="JustSummoned" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -118,7 +113,6 @@ I think I drank too much today..."
 
 [node name="4" parent="JustSummoned" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -126,9 +120,10 @@ offset_bottom = 0.0
 text = "DEMON 3:
 Human, sick!"
 
-[node name="Demon" type="Control" parent="."]
+[node name="Demon" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.8
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -136,7 +131,6 @@ grow_vertical = 2
 
 [node name="1" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -146,7 +140,6 @@ Oh, hi! You must be human. I didn't expect this ritual to actually work."
 
 [node name="2" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -156,7 +149,6 @@ Where am I? What the hell just happened?"
 
 [node name="3" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -166,7 +158,6 @@ You just answered that yourself - but calling this place \"Hell\" is rude, we do
 
 [node name="4" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -176,7 +167,6 @@ What?!"
 
 [node name="5" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -186,7 +176,6 @@ Alright, I will try it slowly. You are in Demon Realm. We accidentally summoned 
 
 [node name="6" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -196,7 +185,6 @@ Is that... Advanced Algebra 4?"
 
 [node name="7" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -204,9 +192,10 @@ offset_bottom = 0.0
 text = "DEMON:
 Human summoning. Anyway, if you want to get out of here, there should be a pamphlet somewhere around here that could help you. I saw it in the other room."
 
-[node name="DemonAgain" type="Control" parent="."]
+[node name="DemonAgain" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.8
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -214,10 +203,41 @@ grow_vertical = 2
 
 [node name="7" parent="DemonAgain" instance=ExtResource("2_skytx")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
 text = "DEMON:
-The pamphlet is somewhere in another room, human. It should help you."
+The pamphlet is somewhere in another room, human. Read it, it should help you."
+
+[node name="Pamphlet" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_right = 0.8
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" parent="Pamphlet" instance=ExtResource("2_skytx")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+text = "Human!
+
+Have you found yourself stuck in the Demon realm for apparently no reason?
+
+Don't worry! We're here to help. It happens all the time!
+
+FAQ:
+
+Is this Hell?
+ - No, we changed the name.
+
+How do I get out?!
+ - Okay, chill! You need to find a cat to get you back to Human world.
+
+How do I find a cat in here?!
+ - You're being hysterical. Just find some Catnip and lay it on a window."
