@@ -242,6 +242,57 @@ How do I get out?!
 How do I find a cat in here?!
  - You're being hysterical. Just find some Catnip and lay it on a window."
 
+[node name="Catnip" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" parent="Catnip" instance=ExtResource("2_skytx")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+text = "Catnip, also called Nepeta cataria, is a herb that cats go crazy about. (It's called CATnip, after all)"
+
+[node name="Coin" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" parent="Coin" instance=ExtResource("2_skytx")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+text = "Demon coin. Who knows how much is that in human money. You can use it to buy demon stuff."
+
+[node name="Fish" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" parent="Fish" instance=ExtResource("2_skytx")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+text = "A tasty, yummy, not at all fishy fish!"
+
 [node name="Cat" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = -1
