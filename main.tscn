@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlppbinr1xnif"]
+
+[ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://first-person-controller/addons/fpc/character.tscn" id="1_s05fu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ggc00"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 11, 0, -0.5, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CSGBox3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGBox3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_ggc00")
+
+[node name="Character" parent="." instance=ExtResource("1_s05fu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.22168, 0, 0.891442)
+default_reticle = "res://first-person-controller/addons/fpc/reticles/reticle_0.tscn"
+JUMP = "jump"
+LEFT = "left"
+RIGHT = "right"
+FORWARD = "forward"
+BACKWARD = "backward"
+LOOK_LEFT = "look_left"
+LOOK_RIGHT = "look_right"
+LOOK_UP = "look_up"
+LOOK_DOWN = "look_down"
