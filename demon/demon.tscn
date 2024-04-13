@@ -1,22 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://ce3aat668j4ib"]
+[gd_scene load_steps=4 format=3 uid="uid://ce3aat668j4ib"]
 
 [ext_resource type="Script" path="res://demon/demon.gd" id="1_44h3k"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pko3g"]
-albedo_color = Color(1, 0.34902, 0.34902, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_h81lo"]
-material = SubResource("StandardMaterial3D_pko3g")
+[ext_resource type="PackedScene" uid="uid://bwms4r06i3u6j" path="res://demon/demon.glb" id="2_d4ar6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hg16x"]
 
 [node name="Demon" type="CharacterBody3D" groups=["interactable"]]
 script = ExtResource("1_44h3k")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_h81lo")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_hg16x")
+
+[node name="demon" parent="." instance=ExtResource("2_d4ar6")]
+transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 0, 0.590231, 0)

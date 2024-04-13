@@ -23,24 +23,40 @@ grow_vertical = 2
 [node name="1" parent="DemonsArrived" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "DEMON 1:
 Guys, guys, let's try that."
 
 [node name="2" parent="DemonsArrived" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "DEMON 2:
 I don't think it's a good idea..."
 
 [node name="3" parent="DemonsArrived" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "DEMON 1:
 C'mon, don't be a party pooper. It's gonna be fun."
 
 [node name="4" parent="DemonsArrived" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "DEMON 3:
 Let's do it. Nothing is gonna happen anyway."
 
@@ -55,6 +71,10 @@ grow_vertical = 2
 [node name="1" parent="DemonsSummoning" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "DEMONS:
 Hu-man! Hu-man! Hu-man!"
 
@@ -69,24 +89,40 @@ grow_vertical = 2
 [node name="1" parent="JustSummoned" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "YOU:
 What..."
 
 [node name="2" parent="JustSummoned" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "DEMON 2:
 Oh no! I was right!"
 
 [node name="3" parent="JustSummoned" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "Demon 1:
 I think I drank too much today..."
 
 [node name="4" parent="JustSummoned" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "DEMON 3:
 Human, sick!"
 
@@ -101,42 +137,70 @@ grow_vertical = 2
 [node name="1" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "DEMON:
 Oh, hi! You must be human. I didn't expect this ritual to actually work."
 
 [node name="2" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "YOU:
 Where am I? What the hell just happened?"
 
 [node name="3" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "DEMON: 
 You just answered that yourself - but calling this place \"Hell\" is rude, we don't use it anymore."
 
 [node name="4" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "YOU:
 What?!"
 
 [node name="5" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "DEMON:
 Alright, I will try it slowly. You are in Demon Realm. We accidentally summoned you using this Human Summoning."
 
 [node name="6" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "YOU:
 Is that... Advanced Algebra 4?"
 
 [node name="7" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "DEMON:
 Human summoning. Anyway, if you want to get out of here, there should be a pamphlet somewhere around here that could help you. I saw it in the other room."
 
@@ -151,5 +215,9 @@ grow_vertical = 2
 [node name="7" parent="DemonAgain" instance=ExtResource("2_skytx")]
 layout_mode = 1
 anchors_preset = 15
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 text = "DEMON:
 The pamphlet is somewhere in another room, human. It should help you."
