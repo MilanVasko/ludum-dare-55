@@ -1,35 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlppbinr1xnif"]
+[gd_scene load_steps=5 format=3 uid="uid://dlppbinr1xnif"]
 
-[ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://first-person-controller/addons/fpc/character.tscn" id="1_s05fu"]
 [ext_resource type="PackedScene" uid="uid://ce3aat668j4ib" path="res://demon/demon.tscn" id="2_w3v6w"]
+[ext_resource type="PackedScene" uid="uid://cddipiraa3s0k" path="res://dialogue/dialogue.tscn" id="3_d8vpw"]
+[ext_resource type="PackedScene" uid="uid://c6j478r8yurra" path="res://player/player.tscn" id="3_iqnun"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ggc00"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Main" type="Node3D"]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
+[node name="Dialogue" parent="." instance=ExtResource("3_d8vpw")]
+
+[node name="Ground" type="CSGBox3D" parent="."]
 transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 11, 0, -0.5, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="CSGBox3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGBox3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
 shape = SubResource("BoxShape3D_ggc00")
-
-[node name="Character" parent="." instance=ExtResource("1_s05fu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.22168, 0, 0.891442)
-dot_reticle = "res://first-person-controller/addons/fpc/reticles/dot.tscn"
-JUMP = "jump"
-LEFT = "left"
-RIGHT = "right"
-FORWARD = "forward"
-BACKWARD = "backward"
-LOOK_LEFT = "look_left"
-LOOK_RIGHT = "look_right"
-LOOK_UP = "look_up"
-LOOK_DOWN = "look_down"
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.353, 1.81156, -3.26165)
 
 [node name="Demon" parent="." instance=ExtResource("2_w3v6w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49561, 0, -3.68484)
+
+[node name="Player" parent="." instance=ExtResource("3_iqnun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71146, 0, 1.92381)

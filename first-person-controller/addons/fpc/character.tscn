@@ -380,6 +380,7 @@ _data = {
 script = ExtResource("1_0t4e8")
 dot_reticle = "res://first-person-controller/addons/fpc/reticles/dot.tscn"
 hand_reticle = "res://first-person-controller/addons/fpc/reticles/hand.tscn"
+no_reticle = "res://first-person-controller/addons/fpc/reticles/none.tscn"
 HEAD = NodePath("Head")
 CAMERA = NodePath("Head/Camera")
 HEADBOB_ANIMATION = NodePath("Head/HeadbobAnimation")

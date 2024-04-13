@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cddipiraa3s0k"]
+
+[ext_resource type="Script" path="res://dialogue/dialogue.gd" id="1_q7wh4"]
+[ext_resource type="PackedScene" uid="uid://ds5807uiaujbj" path="res://dialogue-text/dialogue-text.tscn" id="2_skytx"]
+
+[node name="Dialogue" type="Panel" groups=["dialogue"]]
+anchors_preset = -1
+anchor_left = 0.3
+anchor_right = 0.7
+offset_left = 0.399994
+offset_right = -0.399963
+offset_bottom = 200.0
+script = ExtResource("1_q7wh4")
+
+[node name="Intro" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" parent="Intro" instance=ExtResource("2_skytx")]
+layout_mode = 1
+text = "Intro text 1"
+
+[node name="2" parent="Intro" instance=ExtResource("2_skytx")]
+layout_mode = 1
+text = "Intro text 2"
+
+[node name="Test" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" parent="Test" instance=ExtResource("2_skytx")]
+layout_mode = 1
+text = "Test text"

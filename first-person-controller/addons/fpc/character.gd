@@ -10,9 +10,18 @@ extends CharacterBody3D
 @export var acceleration : float = 10.0
 @export var jump_velocity : float = 4.5
 @export var mouse_sensitivity : float = 0.1
-@export var immobile : bool = false
+@export var _immobile : bool = false
+
+var immobile: bool:
+	get:
+		return _immobile
+	set(value):
+		_immobile = value
+		update_reticle(find_interactable_object())
+
 @export_file var dot_reticle
 @export_file var hand_reticle
+@export_file var no_reticle
 
 @export var initial_facing_direction : Vector3 = Vector3.ZERO
 
@@ -31,7 +40,6 @@ extends CharacterBody3D
 @export var RIGHT : String = "ui_right"
 @export var FORWARD : String = "ui_up"
 @export var BACKWARD : String = "ui_down"
-@export var PAUSE : String = "ui_cancel"
 @export var CROUCH : String
 @export var SPRINT : String
 
@@ -79,8 +87,7 @@ func _ready():
 	if initial_facing_direction:
 		HEAD.set_rotation_degrees(initial_facing_direction) # I don't want to be calling this function if the vector is zero
 
-	if dot_reticle:
-		change_reticle(dot_reticle)
+	change_reticle(dot_reticle)
 
 	# Reset the camera position
 	HEADBOB_ANIMATION.play("RESET")
@@ -96,13 +103,19 @@ func change_reticle(reticle):
 	RETICLE.character = self
 	$UserInterface.add_child(RETICLE)
 
-func update_reticle_if_necessary(new_interactable_object: Node):
-	if new_interactable_object != current_interactable_object:
-		current_interactable_object = new_interactable_object
+func update_reticle(new_interactable_object: Node) -> void:
+	if immobile:
+		change_reticle(no_reticle)
+	else:
 		if new_interactable_object != null:
 			change_reticle(hand_reticle)
 		else:
 			change_reticle(dot_reticle)
+
+func update_reticle_if_necessary(new_interactable_object: Node):
+	if new_interactable_object != current_interactable_object:
+		current_interactable_object = new_interactable_object
+		update_reticle(new_interactable_object)
 
 func find_interactable_object() -> Node:
 	var collider: Node = hand_raycast.get_collider()
@@ -153,17 +166,12 @@ func _physics_process(delta):
 
 
 func handle_jumping():
-	if jumping_enabled:
-		if continuous_jumping:
-			if Input.is_action_pressed(JUMP) and is_on_floor() and !low_ceiling:
-				if jump_animation:
-					JUMP_ANIMATION.play("jump")
-				velocity.y += jump_velocity
-		else:
-			if Input.is_action_just_pressed(JUMP) and is_on_floor() and !low_ceiling:
-				if jump_animation:
-					JUMP_ANIMATION.play("jump")
-				velocity.y += jump_velocity
+	if jumping_enabled and !immobile:
+		var is_jumping := Input.is_action_pressed(JUMP) if continuous_jumping else Input.is_action_just_pressed(JUMP)
+		if is_jumping and is_on_floor() and !low_ceiling:
+			if jump_animation:
+				JUMP_ANIMATION.play("jump")
+			velocity.y += jump_velocity
 
 
 func handle_movement(delta, input_dir):
@@ -241,6 +249,8 @@ func enter_normal_state():
 	speed = base_speed
 
 func enter_crouch_state():
+	if immobile:
+		return
 	state = "crouching"
 	speed = crouch_speed
 	CROUCH_ANIMATION.play("crouch")
@@ -287,13 +297,7 @@ func headbob_animation(moving):
 		HEADBOB_ANIMATION.speed_scale = 1
 
 
-func _process(_delta):
-	if Input.is_action_just_pressed(PAUSE):
-		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		elif Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
+func _process(_delta: float) -> void:
 	HEAD.rotation.x = clamp(HEAD.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 
 	var controller_view_rotation = Input.get_vector(LOOK_LEFT, LOOK_RIGHT, LOOK_UP, LOOK_DOWN)
@@ -301,7 +305,7 @@ func _process(_delta):
 	HEAD.rotation_degrees.x -= controller_view_rotation.y * 1.5
 
 
-func _unhandled_input(event):
-	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and !immobile:
 		HEAD.rotation_degrees.y -= event.relative.x * mouse_sensitivity
 		HEAD.rotation_degrees.x -= event.relative.y * mouse_sensitivity
