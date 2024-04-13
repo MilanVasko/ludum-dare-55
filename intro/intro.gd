@@ -33,7 +33,6 @@ func _on_dialogue_ended(dialogue_name: String) -> void:
 		animation_player.play(SUMMONING_FADEOUT_ANIMATION)
 	elif dialogue_name == JUST_SUMMONED_DIALOGUE:
 		# TODO: animation of demons running away
-		Global.require_player().immobile = false
 		queue_free()
 	else:
 		assert(false, "Unhandled dialogue name \"" + dialogue_name + "\"")
@@ -55,7 +54,7 @@ func spawn_player() -> void:
 	print("Spawn player start")
 	var player_instance: Node3D = player_scene.instantiate()
 	get_node(main_scene).add_child(player_instance)
+	player_instance.immobile = true
 	var spawn_point: Node3D = get_node(player_spawn_point)
 	player_instance.global_position = spawn_point.global_position
-	player_instance.immobile = true
 	animation_player.play(SPAWN_FADEIN_ANIMATION)

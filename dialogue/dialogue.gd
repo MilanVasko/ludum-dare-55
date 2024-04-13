@@ -15,11 +15,18 @@ func _input(event: InputEvent) -> void:
 
 func start_dialogue(dialogue_name: String) -> void:
 	visible = true
+	set_immobile(true)
 	emit_signal("dialogue_started", dialogue_name)
 
 func end_dialogue(dialogue_name: String) -> void:
 	visible = false
 	emit_signal("dialogue_ended", dialogue_name)
+	call_deferred("set_immobile", false)
+
+func set_immobile(value: bool) -> void:
+	var player := Global.find_player_or_null()
+	if player != null:
+		player.immobile = value
 
 func play_dialogue_from_start(dialogue_name: String) -> void:
 	start_dialogue(dialogue_name)
@@ -52,6 +59,6 @@ func continue_dialogue() -> void:
 				return
 		if show_next:
 			# We got to the end of the dialogue
-			end_dialogue(child.name)
+			call_deferred("end_dialogue", child.name)
 			return
 	assert(false, "There is no active dialogue!")

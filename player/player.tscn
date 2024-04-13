@@ -9,8 +9,12 @@ clearcoat_roughness = 0.2
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_jw1de"]
 material = SubResource("StandardMaterial3D_kp17n")
+radius = 0.3
+height = 1.8
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uy03j"]
+radius = 0.3
+height = 1.8
 
 [sub_resource type="Animation" id="Animation_j8cx7"]
 resource_name = "RESET"
@@ -375,6 +379,7 @@ _data = {
 }
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_k4wwl"]
+radius = 0.3
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("HEAD", "CAMERA", "HEADBOB_ANIMATION", "JUMP_ANIMATION", "CROUCH_ANIMATION", "COLLISION_MESH") groups=["player"]]
 script = ExtResource("1_5nakc")
@@ -445,4 +450,4 @@ mouse_filter = 1
 [node name="CrouchCeilingDetection" type="ShapeCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("SphereShape3D_k4wwl")
-target_position = Vector3(0, 0.5, 0)
+target_position = Vector3(0, 0.6, 0)

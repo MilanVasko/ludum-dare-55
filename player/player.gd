@@ -125,11 +125,11 @@ func find_interactable_object() -> Node:
 		return collider
 	return null
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
 	var new_interactable_object := find_interactable_object()
 	update_reticle_if_necessary(new_interactable_object)
 	if new_interactable_object != null:
-		if Input.is_action_just_pressed("interact"):
+		if Input.is_action_just_pressed("interact") and !immobile:
 			new_interactable_object._interact()
 
 	current_speed = Vector3.ZERO.distance_to(get_real_velocity())
