@@ -20,6 +20,9 @@ Let's do it. Nothing is gonna happen anyway.
 
 - Animace vyvolávání.
 
+DEMONS:
+Hu-man! Hu-man! Hu-man!
+
 - kamera se přepne do první osoby hráče uprostřed kruhu.
 
 YOU: What...
