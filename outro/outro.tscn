@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://de5kcew8p8yiv"]
+
+[ext_resource type="Script" path="res://outro/outro.gd" id="1_fab1t"]
+[ext_resource type="PackedScene" uid="uid://ds5807uiaujbj" path="res://dialogue-text/dialogue-text.tscn" id="2_q3si0"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Outro" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_fab1t")
+
+[node name="Outro" type="Control" parent="Outro"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" parent="Outro/Outro" instance=ExtResource("2_q3si0")]
+layout_mode = 1
+anchors_preset = -1
+text = "YOU:
+Am I... back?"
+
+[node name="2" parent="Outro/Outro" instance=ExtResource("2_q3si0")]
+layout_mode = 1
+anchors_preset = -1
+text = "YOU:
+Whoa, that was intense. I am so glad to be home."
+
+[node name="3" parent="Outro/Outro" instance=ExtResource("2_q3si0")]
+layout_mode = 1
+anchors_preset = -1
+text = "DEMON:
+I am really happy for you, but can you tell me where I am?"
+
+[node name="4" parent="Outro/Outro" instance=ExtResource("2_q3si0")]
+layout_mode = 1
+anchors_preset = -1
+text = "YOU:
+Oh, no."
+
+[node name="5" parent="Outro/Outro" instance=ExtResource("2_q3si0")]
+layout_mode = 1
+anchors_preset = -1
+text = "Thanks for playing!
+
+This game was created for Ludum Dare 55 in 48 hours by:
+
+EmaZuro - Writing, sounds, voice-acting
+Milan Vaško - Programming, music
+NettlesCat - Graphics, level design"
+
+[node name="6" parent="Outro/Outro" instance=ExtResource("2_q3si0")]
+layout_mode = 1
+anchors_preset = -1
+text = "You can click once more to play again."
+
+[connection signal="dialogue_ended" from="Outro" to="Outro" method="_on_dialogue_ended"]

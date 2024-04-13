@@ -7,3 +7,4 @@
 ## TODO
 
 - [ ] Hand reticle
+- [ ] Cat success dialogue
