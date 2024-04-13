@@ -7,6 +7,7 @@ const DEMONS_SUMMONING_DIALOGUE = "DemonsSummoning"
 const SUMMONING_FADEOUT_ANIMATION = "summoning-fadeout"
 const SPAWN_FADEIN_ANIMATION = "spawn-fadein"
 const JUST_SUMMONED_DIALOGUE = "JustSummoned"
+const DEMON_DIALOGUE = "Demon"
 
 @onready var animation_player = $AnimationPlayer
 @export var player_scene: PackedScene
@@ -31,6 +32,8 @@ func _on_dialogue_ended(dialogue_name: String) -> void:
 	elif dialogue_name == DEMONS_SUMMONING_DIALOGUE:
 		animation_player.play(SUMMONING_FADEOUT_ANIMATION)
 	elif dialogue_name == JUST_SUMMONED_DIALOGUE:
+		# TODO: animation of demons running away
+		Global.require_player().immobile = false
 		queue_free()
 	else:
 		assert(false, "Unhandled dialogue name \"" + dialogue_name + "\"")
@@ -51,9 +54,8 @@ func _on_animation_finished(anim_name: StringName) -> void:
 func spawn_player() -> void:
 	print("Spawn player start")
 	var player_instance: Node3D = player_scene.instantiate()
-	player_instance.initial_facing_direction = Vector3.BACK
 	get_node(main_scene).add_child(player_instance)
 	var spawn_point: Node3D = get_node(player_spawn_point)
 	player_instance.global_position = spawn_point.global_position
-	#player_instance.global_rotation = spawn_point.global_rotation
+	player_instance.immobile = true
 	animation_player.play(SPAWN_FADEIN_ANIMATION)
