@@ -1,6 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://cc1m2a1obsyn4"]
+[gd_scene load_steps=18 format=3 uid="uid://cb26ec3pvjvt3"]
 
-[ext_resource type="Script" path="res://first-person-controller/addons/fpc/character.gd" id="1_0t4e8"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_7f4dh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp17n"]
 albedo_color = Color(0.909804, 0.596078, 0, 1)
@@ -377,18 +377,27 @@ _data = {
 [sub_resource type="SphereShape3D" id="SphereShape3D_k4wwl"]
 
 [node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("HEAD", "CAMERA", "HEADBOB_ANIMATION", "JUMP_ANIMATION", "CROUCH_ANIMATION", "COLLISION_MESH")]
-script = ExtResource("1_0t4e8")
-dot_reticle = "res://first-person-controller/addons/fpc/reticles/dot.tscn"
-hand_reticle = "res://first-person-controller/addons/fpc/reticles/hand.tscn"
-no_reticle = "res://first-person-controller/addons/fpc/reticles/none.tscn"
+script = ExtResource("1_7f4dh")
+dot_reticle = "res://player/reticles/dot.tscn"
+hand_reticle = "res://player/reticles/hand.tscn"
+no_reticle = "res://player/reticles/none.tscn"
 HEAD = NodePath("Head")
 CAMERA = NodePath("Head/Camera")
 HEADBOB_ANIMATION = NodePath("Head/HeadbobAnimation")
 JUMP_ANIMATION = NodePath("Head/JumpAnimation")
 CROUCH_ANIMATION = NodePath("CrouchAnimation")
 COLLISION_MESH = NodePath("Collision")
+JUMP = "jump"
+LEFT = "left"
+RIGHT = "right"
+FORWARD = "forward"
+BACKWARD = "backward"
 CROUCH = "crouch"
 SPRINT = "sprint"
+LOOK_LEFT = "look_left"
+LOOK_RIGHT = "look_right"
+LOOK_UP = "look_up"
+LOOK_DOWN = "look_down"
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
