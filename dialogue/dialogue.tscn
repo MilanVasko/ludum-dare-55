@@ -376,3 +376,27 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "CAT:
 Don't just stand there. Go get me some fish, human."
+
+[node name="FishOMat" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_right = 0.8
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" parent="FishOMat" instance=ExtResource("2_skytx")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+text = "FISH-O-MAT Deluxe!
+
+Are you craving fish?
+Are you a human stuck here and need to bribe a cat to get out of here?
+
+BUY A FISH!
+
+NOW ONLY 1 Demon coin"

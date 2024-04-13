@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsgu73ajxwt6p"]
+
+[ext_resource type="Script" path="res://fishomat/fishomat.gd" id="1_mkx2s"]
+[ext_resource type="PackedScene" uid="uid://24bl1usur6s1" path="res://fishomat/fishomat.glb" id="1_w6rkb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_72ys2"]
+size = Vector3(0.5, 1.5, 1)
+
+[node name="FishOMat" type="CharacterBody3D" groups=["interactable"]]
+script = ExtResource("1_mkx2s")
+
+[node name="fishomat" parent="." instance=ExtResource("1_w6rkb")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("BoxShape3D_72ys2")
