@@ -432,7 +432,6 @@ transform = Transform3D(1, 0, 0, 0, 0.999391, -0.0348995, 0, 0.0348995, 0.999391
 target_position = Vector3(0, 0, -2)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Head/Camera"]
-volume_db = 5.556
 bus = &"Dialogue"
 
 [node name="HeadbobAnimation" type="AnimationPlayer" parent="Head"]

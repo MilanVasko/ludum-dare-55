@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://de5kcew8p8yiv"]
+[gd_scene load_steps=10 format=3 uid="uid://de5kcew8p8yiv"]
 
 [ext_resource type="Script" path="res://outro/outro.gd" id="1_fab1t"]
 [ext_resource type="PackedScene" uid="uid://ds5807uiaujbj" path="res://dialogue-text/dialogue-text.tscn" id="2_q3si0"]
+[ext_resource type="Script" path="res://outro/audio_player.gd" id="3_roh62"]
+[ext_resource type="AudioStream" uid="uid://blwg5k6iigd60" path="res://player/player.wav" id="4_15t0f"]
+[ext_resource type="AudioStream" uid="uid://bm0q4hn0mp6w2" path="res://player/player2.wav" id="5_khsmv"]
+[ext_resource type="AudioStream" uid="uid://d0baverxd3b07" path="res://player/player3.wav" id="6_2m6ir"]
+[ext_resource type="AudioStream" uid="uid://c8ksl7o4stg4w" path="res://demon/demon1.wav" id="7_eyoa1"]
+[ext_resource type="AudioStream" uid="uid://l1650bo7p0j6" path="res://demon/demon2.wav" id="8_m6d4u"]
+[ext_resource type="AudioStream" uid="uid://dvjd15nh3kehl" path="res://demon/demon3.wav" id="9_7vg1s"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -27,24 +34,28 @@ layout_mode = 1
 anchors_preset = -1
 text = "YOU:
 Am I... back?"
+dialogue_sound = 1
 
 [node name="2" parent="Outro/Outro" instance=ExtResource("2_q3si0")]
 layout_mode = 1
 anchors_preset = -1
 text = "YOU:
 Whoa, that was intense. I am so glad to be home."
+dialogue_sound = 1
 
 [node name="3" parent="Outro/Outro" instance=ExtResource("2_q3si0")]
 layout_mode = 1
 anchors_preset = -1
 text = "DEMON:
 I am really happy for you, but can you tell me where I am?"
+dialogue_sound = 4
 
 [node name="4" parent="Outro/Outro" instance=ExtResource("2_q3si0")]
 layout_mode = 1
 anchors_preset = -1
 text = "YOU:
 Oh, no."
+dialogue_sound = 1
 
 [node name="5" parent="Outro/Outro" instance=ExtResource("2_q3si0")]
 layout_mode = 1
@@ -62,4 +73,11 @@ layout_mode = 1
 anchors_preset = -1
 text = "You can click once more to play again."
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Dialogue"
+script = ExtResource("3_roh62")
+human_sounds = Array[AudioStream]([ExtResource("4_15t0f"), ExtResource("5_khsmv"), ExtResource("6_2m6ir")])
+demon_sounds = Array[AudioStream]([ExtResource("7_eyoa1"), ExtResource("8_m6d4u"), ExtResource("9_7vg1s")])
+
 [connection signal="dialogue_ended" from="Outro" to="Outro" method="_on_dialogue_ended"]
+[connection signal="dialogue_text_appeared" from="Outro" to="AudioStreamPlayer" method="_on_outro_dialogue_text_appeared"]
