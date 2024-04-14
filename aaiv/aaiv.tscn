@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://jhg3kkc7llyy"]
+
+[ext_resource type="PackedScene" uid="uid://bi5am6kyxxyu0" path="res://aaiv/aaiv.blend" id="1_plj00"]
+
+[node name="Aaiv" type="Node3D"]
+
+[node name="aaiv" parent="." instance=ExtResource("1_plj00")]
+transform = Transform3D(7.64274e-15, 1.74846e-07, -4, 4, -1.74846e-07, 0, -1.74846e-07, -4, -1.74846e-07, 0, 0.02, 0)

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://binqrce4fhh0c"
-path.s3tc="res://.godot/imported/aaiv.png-16caa5c52338fc1a5dd831dac05f2ab6.s3tc.ctex"
+path.s3tc="res://.godot/imported/aaiv.png-1442f5e67a9eb3c2ac7965931fd9c457.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://unused-assets/raw-models/aaiv.png"
-dest_files=["res://.godot/imported/aaiv.png-16caa5c52338fc1a5dd831dac05f2ab6.s3tc.ctex"]
+source_file="res://aaiv/aaiv.png"
+dest_files=["res://.godot/imported/aaiv.png-1442f5e67a9eb3c2ac7965931fd9c457.s3tc.ctex"]
 
 [params]
 
