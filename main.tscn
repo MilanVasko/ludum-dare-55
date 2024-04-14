@@ -330,7 +330,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.57133, 0, 3.46655)
 dialogue_sound = 2
 
 [node name="IntroCamera" type="Camera3D" parent="Intro"]
-transform = Transform3D(-0.733116, -0.223079, 0.642477, 0, 0.944675, 0.328008, -0.680104, 0.240468, -0.692556, 8.64223, 3.31233, -8.04152)
+transform = Transform3D(-0.733116, -0.223079, 0.642477, 0, 0.944675, 0.328008, -0.680104, 0.240468, -0.692556, 8.64223, 2.70347, -8.04152)
 current = true
 
 [node name="IntroDemon" parent="Intro" instance=ExtResource("2_w3v6w")]
@@ -348,7 +348,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.93442, 0, 5.33479)
 
 [node name="Aaiv" parent="." instance=ExtResource("7_6mpdc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08194, 0.0445075, -3.77711)
+transform = Transform3D(0.941394, 0, -0.337309, 0, 1, 0, 0.337309, 0, 0.941394, 5.08194, 0.0445075, -3.77711)
 
 [node name="PlayerSpawnPoint" type="Marker3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.08194, 0.0445075, -3.77711)
@@ -361,7 +361,7 @@ dialogue_sound = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.63847, 0, 12.3339)
 
 [node name="Plant" parent="." instance=ExtResource("7_s1ekp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.682, 0, -3.0462)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.410925, 0.576683, 0.115714)
 
 [node name="PlantDestination" parent="." instance=ExtResource("9_ab58n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.56406, 0.5, 20.5999)
@@ -373,13 +373,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5651, 0.5, 20.5999)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.56406, 1.64275, 20.5999)
 
 [node name="FishOMat" parent="." instance=ExtResource("10_fnpen")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0651, 0, 15.4586)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.88636, 0, 7.08668)
 
 [node name="Coin" parent="." instance=ExtResource("11_t6h88")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.21625, 0, 4.94384)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 10.1769, 0.803496, -3.30267)
 
 [node name="Book" parent="." instance=ExtResource("12_orgyr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.42652, 0.00772573, -5.02105)
+transform = Transform3D(0.562675, 0, -0.826678, 0, 1, 0, 0.826678, 0, 0.562675, 10.4376, 0.77767, -6.94063)
 
 [node name="Wc6" type="Node" parent="."]
 
@@ -418,6 +418,15 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.8131
 [node name="Bed" parent="." instance=ExtResource("15_k7obs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105545, 0, -7.88006)
 
+[node name="Bed3" parent="." instance=ExtResource("15_k7obs")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.4364, 0, -8.81835)
+
+[node name="Bed2" parent="." instance=ExtResource("15_k7obs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0784016, 0, -2.12447)
+
+[node name="Bed4" parent="." instance=ExtResource("15_k7obs")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.38015, 0, 0.547812)
+
 [node name="DoorC" parent="." instance=ExtResource("16_pbf13")]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 5.06455, 0, 2.33504)
 opened_angle = 90.0
@@ -435,6 +444,18 @@ opened_angle = -90.0
 [node name="Window" parent="." instance=ExtResource("19_tk2lm")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11.3833, 0.528225, 4.8356)
 
+[node name="ToiletWindow1" parent="." instance=ExtResource("19_tk2lm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.57622, 0.538559, 20.6362)
+
+[node name="ToiletWindow2" parent="." instance=ExtResource("19_tk2lm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.55994, 0.538559, 20.6362)
+
+[node name="RoomWindow1" parent="." instance=ExtResource("19_tk2lm")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11.3833, 0.528225, -5.19248)
+
+[node name="RoomWindow2" parent="." instance=ExtResource("19_tk2lm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.53989, 0.528225, -9.94923)
+
 [node name="Candle" parent="." instance=ExtResource("20_jwqw4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.08061, 0, -3.74588)
 
@@ -445,28 +466,46 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.05482, 4.76837e-07, -5.7689
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9882, 0, -3.68354)
 
 [node name="Closet" parent="." instance=ExtResource("21_rjwng")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.55606, 2.38419e-07, -9.10883)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.85378, 2.38419e-07, -9.3677)
+
+[node name="Closet2" parent="." instance=ExtResource("21_rjwng")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.91887, 2.38419e-07, 1.02385)
+
+[node name="Closet3" parent="." instance=ExtResource("21_rjwng")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.40869, 2.38419e-07, 1.02385)
 
 [node name="Table" parent="." instance=ExtResource("22_57h4m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49821, 0, -5.35344)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.220256, -0.270137, -4.94075)
+
+[node name="Table2" parent="." instance=ExtResource("22_57h4m")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.4363, -0.270137, -6.8003)
+
+[node name="Table3" parent="." instance=ExtResource("22_57h4m")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.4363, -0.270137, -2.79201)
+
+[node name="Table4" parent="." instance=ExtResource("22_57h4m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.47721, -0.270137, 0.683066)
 
 [node name="Dresser" parent="." instance=ExtResource("23_b2f01")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.49288, 4.76837e-07, -8.50661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.56938, 4.76837e-07, -9.38624)
+
+[node name="Dresser2" parent="." instance=ExtResource("23_b2f01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.05393, 4.76837e-07, -9.38624)
+
+[node name="Dresser3" parent="." instance=ExtResource("23_b2f01")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.7454, 4.76837e-07, -0.91153)
+
+[node name="Dresser4" parent="." instance=ExtResource("23_b2f01")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.434396, 4.76837e-07, 0.154887)
 
 [node name="Gate" parent="." instance=ExtResource("24_fqnev")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.99063, -5.96046e-08, 6.33656)
-closed_angle = 90.0
-opened_angle = 180.0
 
 [node name="Gate2" parent="." instance=ExtResource("24_fqnev")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.99063, -5.96046e-08, 5.33656)
-closed_angle = 90.0
-opened_angle = 180.0
 
 [node name="Gate3" parent="." instance=ExtResource("24_fqnev")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.99063, -5.96046e-08, 4.33656)
-closed_angle = 90.0
-opened_angle = 180.0
 
 [connection signal="dialogue_ended" from="CanvasLayer/Dialogue" to="Intro" method="_on_dialogue_ended"]
 [connection signal="dialogue_text_appeared" from="CanvasLayer/Dialogue" to="Intro/IntroDemon2" method="_on_dialogue_text_appeared"]
