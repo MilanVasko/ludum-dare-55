@@ -394,10 +394,6 @@ current = true
 transform = Transform3D(0.157296, 0, 0.987551, 0, 1, 0, -0.987551, 0, 0.157296, 5.57133, 0, 3.46655)
 dialogue_sound = 3
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.986234, -0.071149, -0.149267, 0.165357, 0.424352, 0.890271, 0, -0.902698, 0.430275, 3.353, 13.7106, 27.3053)
-shadow_enabled = true
-
 [node name="Dorms" parent="." instance=ExtResource("3_edpwd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.93442, 0, 5.33479)
 
@@ -542,6 +538,15 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.990
 
 [node name="Brochure" parent="." instance=ExtResource("26_dskj8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52269, 1.20303, 2.58591)
+
+[node name="Lights" type="Node" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(0.986234, -0.071149, -0.149267, 0.165357, 0.424352, 0.890271, 0, -0.902698, 0.430275, 2.65999, 17.8439, 18.5128)
+shadow_enabled = true
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(0.944617, 0.0679993, 0.321052, -0.267837, -0.405567, 0.873945, 0.189635, -0.911533, -0.364893, 2.57809, 18.3324, 17.4736)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("6_u1hci")
