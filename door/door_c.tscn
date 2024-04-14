@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d34t5e1ebxyjm"]
+
+[ext_resource type="PackedScene" uid="uid://c8kn6k1sa8uy1" path="res://door/door_c.blend" id="1_u5w8t"]
+[ext_resource type="Script" path="res://door/door.gd" id="1_vayha"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yxd2m"]
+size = Vector3(1, 2, 0.02)
+
+[node name="DoorC" type="AnimatableBody3D" groups=["interactable"]]
+script = ExtResource("1_vayha")
+time_to_change = 0.3
+
+[node name="door_c" parent="." instance=ExtResource("1_u5w8t")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.5, 0, 2.18557e-08)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, 0)
+shape = SubResource("BoxShape3D_yxd2m")

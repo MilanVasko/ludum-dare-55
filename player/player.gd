@@ -299,6 +299,10 @@ func headbob_animation(moving):
 		HEADBOB_ANIMATION.speed_scale = 1
 
 func interact_with_object() -> void:
+	if current_interactable_object.has_method("_can_interact"):
+		if current_interactable_object._can_interact():
+			current_interactable_object._interact()
+		return
 	current_interactable_object._interact()
 
 func _on_dialogue_start(_dialogue_name: String) -> void:
