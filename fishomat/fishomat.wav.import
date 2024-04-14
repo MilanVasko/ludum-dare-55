@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bnlnbf5k3hkx2"
-path="res://.godot/imported/fish-o-mat.wav-903807e0951d7c3d8c82914b65b92967.sample"
+path="res://.godot/imported/fishomat.wav-d9f7968d84f408407bcd516a8c13d903.sample"
 
 [deps]
 
-source_file="res://unused-assets/sounds/fish-o-mat.wav"
-dest_files=["res://.godot/imported/fish-o-mat.wav-903807e0951d7c3d8c82914b65b92967.sample"]
+source_file="res://fishomat/fishomat.wav"
+dest_files=["res://.godot/imported/fishomat.wav-d9f7968d84f408407bcd516a8c13d903.sample"]
 
 [params]
 
