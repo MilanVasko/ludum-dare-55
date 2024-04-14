@@ -1,6 +1,7 @@
 extends Control
 
 signal dialogue_started(dialogue_name: String)
+signal dialogue_text_appeared(dialogue_name: String, dialogue_sound: DialogueText.DialogueSound)
 signal dialogue_ended(dialogue_name: String)
 
 func _ready() -> void:
@@ -30,6 +31,8 @@ func play_dialogue_from_start(dialogue_name: String) -> void:
 			var first := true
 			for inner_child in child.get_children():
 				inner_child.visible = first
+				if first:
+					dialogue_text_appeared.emit(dialogue_name, inner_child.dialogue_sound)
 				first = false
 			child.visible = true
 		else:
@@ -49,6 +52,7 @@ func continue_dialogue() -> void:
 			if show_next:
 				show_next = false
 				inner_child.visible = true
+				dialogue_text_appeared.emit(child.name, inner_child.dialogue_sound)
 				return
 		if show_next:
 			# We got to the end of the dialogue

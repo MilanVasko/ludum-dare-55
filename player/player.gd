@@ -11,6 +11,7 @@ extends CharacterBody3D
 @export var jump_velocity : float = 4.5
 @export var mouse_sensitivity : float = 0.1
 @export var _immobile : bool = false
+@export var dialogue_sound: DialogueText.DialogueSound
 
 var immobile: bool:
 	get:
@@ -305,6 +306,10 @@ func _on_dialogue_start(_dialogue_name: String) -> void:
 
 func _on_dialogue_end(_dialogue_name: String) -> void:
 	immobile = false
+
+func _on_dialogue_text_appeared(dialogue_name: String, current_dialogue_sound: DialogueText.DialogueSound) -> void:
+	if current_dialogue_sound == dialogue_sound:
+		print("TODO: player sound - ", dialogue_name, ", ", current_dialogue_sound)
 
 func _process(_delta: float) -> void:
 	HEAD.rotation.x = clamp(HEAD.rotation.x, deg_to_rad(-90), deg_to_rad(90))

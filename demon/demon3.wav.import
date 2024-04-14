@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://clr0oc2s6kib7"
-path="res://.godot/imported/fish-o-mat.wav-a7c449edd90fbc8a65f492b4268f9cce.sample"
+uid="uid://dvjd15nh3kehl"
+path="res://.godot/imported/demon3.wav-1bc7eaa1a3376a13847ce020128dafbc.sample"
 
 [deps]
 
-source_file="res://sounds/fish-o-mat.wav"
-dest_files=["res://.godot/imported/fish-o-mat.wav-a7c449edd90fbc8a65f492b4268f9cce.sample"]
+source_file="res://demon/demon3.wav"
+dest_files=["res://.godot/imported/demon3.wav-1bc7eaa1a3376a13847ce020128dafbc.sample"]
 
 [params]
 

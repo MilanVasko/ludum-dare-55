@@ -29,6 +29,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "DEMON 1:
 Guys, guys, let's try that."
+dialogue_sound = 2
 
 [node name="2" parent="DemonsArrived" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -38,6 +39,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "DEMON 2:
 I don't think it's a good idea..."
+dialogue_sound = 3
 
 [node name="3" parent="DemonsArrived" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -47,6 +49,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "DEMON 1:
 C'mon, don't be a party pooper. It's gonna be fun."
+dialogue_sound = 2
 
 [node name="4" parent="DemonsArrived" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -56,6 +59,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "DEMON 3:
 Let's do it. Nothing is gonna happen anyway."
+dialogue_sound = 4
 
 [node name="DemonsSummoning" type="Panel" parent="."]
 layout_mode = 1
@@ -74,6 +78,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "DEMONS:
 Hu-man! Hu-man! Hu-man!"
+dialogue_sound = 5
 
 [node name="JustSummoned" type="Panel" parent="."]
 layout_mode = 1
@@ -92,6 +97,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "YOU:
 What..."
+dialogue_sound = 1
 
 [node name="2" parent="JustSummoned" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -101,6 +107,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "DEMON 2:
 Oh no! I was right!"
+dialogue_sound = 3
 
 [node name="3" parent="JustSummoned" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -110,6 +117,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "Demon 1:
 I think I drank too much today..."
+dialogue_sound = 2
 
 [node name="4" parent="JustSummoned" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -119,6 +127,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "DEMON 3:
 Human, sick!"
+dialogue_sound = 4
 
 [node name="Demon" type="Panel" parent="."]
 layout_mode = 1
@@ -137,6 +146,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "DEMON:
 Oh, hi! You must be human. I didn't expect this ritual to actually work."
+dialogue_sound = 4
 
 [node name="2" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -146,6 +156,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "YOU:
 Where am I? What the hell just happened?"
+dialogue_sound = 1
 
 [node name="3" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -155,6 +166,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "DEMON: 
 You just answered that yourself - but calling this place \"Hell\" is rude, we don't use it anymore."
+dialogue_sound = 4
 
 [node name="4" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -164,6 +176,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "YOU:
 What?!"
+dialogue_sound = 1
 
 [node name="5" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -173,6 +186,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "DEMON:
 Alright, I will try it slowly. You are in Demon Realm. We accidentally summoned you using this Human Summoning."
+dialogue_sound = 4
 
 [node name="6" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -182,6 +196,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "YOU:
 Is that... Advanced Algebra 4?"
+dialogue_sound = 1
 
 [node name="7" parent="Demon" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -191,6 +206,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "DEMON:
 Human summoning. Anyway, if you want to get out of here, there should be a pamphlet somewhere around here that could help you. I saw it in the other room."
+dialogue_sound = 4
 
 [node name="DemonAgain" type="Panel" parent="."]
 layout_mode = 1
@@ -201,7 +217,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="7" parent="DemonAgain" instance=ExtResource("2_skytx")]
+[node name="1" parent="DemonAgain" instance=ExtResource("2_skytx")]
 layout_mode = 1
 offset_left = 0.0
 offset_top = 0.0
@@ -209,6 +225,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "DEMON:
 The pamphlet is somewhere in another room, human. Read it, it should help you."
+dialogue_sound = 4
 
 [node name="Pamphlet" type="Panel" parent="."]
 layout_mode = 1
@@ -310,6 +327,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "CAT:
 Whoa, a Catnip! Now that's some good material."
+dialogue_sound = 6
 
 [node name="2" parent="Cat" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -319,6 +337,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "YOU:
 Uhm... Kitty-Kitty-Kitty?"
+dialogue_sound = 1
 
 [node name="3" parent="Cat" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -328,6 +347,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "CAT:
 Oh! A human! Wait... that's MY human!"
+dialogue_sound = 6
 
 [node name="4" parent="Cat" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -337,6 +357,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "YOU:
 Daisy?"
+dialogue_sound = 1
 
 [node name="5" parent="Cat" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -346,6 +367,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "CAT:
 Yes, my human! How did you get here?"
+dialogue_sound = 6
 
 [node name="6" parent="Cat" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -355,6 +377,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "YOU:
 Well... Advanced Algebra, I assume?"
+dialogue_sound = 1
 
 [node name="7" parent="Cat" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -364,6 +387,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "CAT:
 Classic."
+dialogue_sound = 6
 
 [node name="8" parent="Cat" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -373,6 +397,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "YOU:
 I need you to get me back, can you do that?"
+dialogue_sound = 1
 
 [node name="9" parent="Cat" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -382,6 +407,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "CAT:
 I can!"
+dialogue_sound = 6
 
 [node name="10" parent="Cat" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -391,6 +417,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "YOU:
 Great so how do we..."
+dialogue_sound = 1
 
 [node name="11" parent="Cat" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -400,6 +427,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "CAT:
 But first, I would like to have a fish. Go get me some fish, human."
+dialogue_sound = 6
 
 [node name="12" parent="Cat" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -409,6 +437,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "YOU:
 ... Cats."
+dialogue_sound = 1
 
 [node name="CatAgain" type="Panel" parent="."]
 layout_mode = 1
@@ -427,6 +456,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "CAT:
 Don't just stand there. Go get me some fish, human."
+dialogue_sound = 6
 
 [node name="FishOMat" type="Panel" parent="."]
 layout_mode = 1
@@ -469,6 +499,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "CAT:
 Mmmm, that's a nice fish."
+dialogue_sound = 6
 
 [node name="2" parent="CatSuccess" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -478,6 +509,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "YOU:
 Will you get me home now?"
+dialogue_sound = 1
 
 [node name="3" parent="CatSuccess" instance=ExtResource("2_skytx")]
 layout_mode = 1
@@ -487,3 +519,4 @@ offset_right = 0.0
 offset_bottom = 0.0
 text = "CAT:
 Home? Oh, right, let's go..."
+dialogue_sound = 6

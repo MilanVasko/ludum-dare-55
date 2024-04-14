@@ -58,6 +58,7 @@ func spawn_player() -> void:
 	var dialogue := get_node(dialogue_path)
 	dialogue.dialogue_started.connect(player_instance._on_dialogue_start)
 	dialogue.dialogue_ended.connect(player_instance._on_dialogue_end)
+	dialogue.dialogue_text_appeared.connect(player_instance._on_dialogue_text_appeared)
 	var spawn_point: Node3D = get_node(player_spawn_point)
 	player_instance.global_position = spawn_point.global_position
 	animation_player.play(SPAWN_FADEIN_ANIMATION)

@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://ds5807uiaujbj"]
+[gd_scene load_steps=2 format=3 uid="uid://ds5807uiaujbj"]
+
+[ext_resource type="Script" path="res://dialogue-text/dialogue-text.gd" id="1_6877y"]
 
 [node name="DialogueText" type="Label"]
 anchors_preset = 15
@@ -14,3 +16,4 @@ text = "TODO"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+script = ExtResource("1_6877y")

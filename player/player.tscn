@@ -383,6 +383,7 @@ radius = 0.3
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("HEAD", "CAMERA", "HEADBOB_ANIMATION", "JUMP_ANIMATION", "CROUCH_ANIMATION", "COLLISION_MESH") groups=["player"]]
 script = ExtResource("1_5nakc")
+dialogue_sound = 1
 dot_reticle = "res://player/reticles/dot.tscn"
 hand_reticle = "res://player/reticles/hand.tscn"
 no_reticle = "res://player/reticles/none.tscn"
@@ -425,6 +426,8 @@ transform = Transform3D(1, 0, 0, 0, 0.999391, -0.0348995, 0, 0.0348995, 0.999391
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera"]
 target_position = Vector3(0, 0, -2)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Head/Camera"]
 
 [node name="HeadbobAnimation" type="AnimationPlayer" parent="Head"]
 libraries = {

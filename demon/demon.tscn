@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://ce3aat668j4ib"]
+[gd_scene load_steps=7 format=3 uid="uid://ce3aat668j4ib"]
 
 [ext_resource type="Script" path="res://demon/demon.gd" id="1_44h3k"]
+[ext_resource type="AudioStream" uid="uid://c8ksl7o4stg4w" path="res://demon/demon1.wav" id="2_21klf"]
 [ext_resource type="PackedScene" uid="uid://bwms4r06i3u6j" path="res://demon/demon.glb" id="2_d4ar6"]
+[ext_resource type="AudioStream" uid="uid://l1650bo7p0j6" path="res://demon/demon2.wav" id="3_dd7mw"]
+[ext_resource type="AudioStream" uid="uid://dvjd15nh3kehl" path="res://demon/demon3.wav" id="4_b6tmo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hg16x"]
 
 [node name="Demon" type="CharacterBody3D" groups=["interactable"]]
 script = ExtResource("1_44h3k")
+sound_clips = Array[AudioStream]([ExtResource("2_21klf"), ExtResource("3_dd7mw"), ExtResource("4_b6tmo")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -14,3 +18,7 @@ shape = SubResource("CapsuleShape3D_hg16x")
 
 [node name="demon" parent="." instance=ExtResource("2_d4ar6")]
 transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 0, 0.590231, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34683, 0)
+bus = &"Dialogue"
