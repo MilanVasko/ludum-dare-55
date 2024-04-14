@@ -1,6 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://c6j478r8yurra"]
+[gd_scene load_steps=21 format=3 uid="uid://c6j478r8yurra"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_5nakc"]
+[ext_resource type="AudioStream" uid="uid://blwg5k6iigd60" path="res://player/player.wav" id="2_tk3iq"]
+[ext_resource type="AudioStream" uid="uid://bm0q4hn0mp6w2" path="res://player/player2.wav" id="3_repps"]
+[ext_resource type="AudioStream" uid="uid://d0baverxd3b07" path="res://player/player3.wav" id="4_x7040"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp17n"]
 albedo_color = Color(0.909804, 0.596078, 0, 1)
@@ -384,6 +387,7 @@ radius = 0.3
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("HEAD", "CAMERA", "HEADBOB_ANIMATION", "JUMP_ANIMATION", "CROUCH_ANIMATION", "COLLISION_MESH") groups=["player"]]
 script = ExtResource("1_5nakc")
 dialogue_sound = 1
+sound_clips = Array[AudioStream]([ExtResource("2_tk3iq"), ExtResource("3_repps"), ExtResource("4_x7040")])
 dot_reticle = "res://player/reticles/dot.tscn"
 hand_reticle = "res://player/reticles/hand.tscn"
 no_reticle = "res://player/reticles/none.tscn"
@@ -428,6 +432,8 @@ transform = Transform3D(1, 0, 0, 0, 0.999391, -0.0348995, 0, 0.0348995, 0.999391
 target_position = Vector3(0, 0, -2)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Head/Camera"]
+volume_db = 5.556
+bus = &"Dialogue"
 
 [node name="HeadbobAnimation" type="AnimationPlayer" parent="Head"]
 libraries = {

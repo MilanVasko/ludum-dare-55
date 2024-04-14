@@ -12,6 +12,7 @@ extends CharacterBody3D
 @export var mouse_sensitivity : float = 0.1
 @export var _immobile : bool = false
 @export var dialogue_sound: DialogueText.DialogueSound
+@export var sound_clips: Array[AudioStream]
 
 var immobile: bool:
 	get:
@@ -64,6 +65,7 @@ var immobile: bool:
 @export var jump_animation : bool = true
 
 @onready var hand_raycast: RayCast3D = $Head/Camera/RayCast3D
+@onready var audio_player := $Head/Camera/AudioStreamPlayer3D
 
 # Member variables
 var speed : float = base_speed
@@ -311,9 +313,12 @@ func _on_dialogue_start(_dialogue_name: String) -> void:
 func _on_dialogue_end(_dialogue_name: String) -> void:
 	immobile = false
 
-func _on_dialogue_text_appeared(dialogue_name: String, current_dialogue_sound: DialogueText.DialogueSound) -> void:
+func _on_dialogue_text_appeared(_dialogue_name: String, current_dialogue_sound: DialogueText.DialogueSound) -> void:
+	if audio_player.playing:
+		audio_player.stop()
 	if current_dialogue_sound == dialogue_sound:
-		print("TODO: player sound - ", dialogue_name, ", ", current_dialogue_sound)
+		audio_player.stream = sound_clips.pick_random()
+		audio_player.play()
 
 func _process(_delta: float) -> void:
 	HEAD.rotation.x = clamp(HEAD.rotation.x, deg_to_rad(-90), deg_to_rad(90))
