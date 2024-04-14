@@ -13,6 +13,7 @@ const DEMON_DIALOGUE = "Demon"
 @export var player_scene: PackedScene
 @export var player_spawn_point: NodePath
 @export var main_scene: NodePath
+@export var dialogue_path: NodePath
 
 func _ready() -> void:
 	animation_player.play(DEMONS_ARRIVING_ANIMATION)
@@ -51,10 +52,12 @@ func _on_animation_finished(anim_name: StringName) -> void:
 		assert(false, "Unhandled animation name \"" + anim_name + "\"")
 
 func spawn_player() -> void:
-	print("Spawn player start")
 	var player_instance: Node3D = player_scene.instantiate()
 	get_node(main_scene).add_child(player_instance)
 	player_instance.immobile = true
+	var dialogue := get_node(dialogue_path)
+	dialogue.dialogue_started.connect(player_instance._on_dialogue_start)
+	dialogue.dialogue_ended.connect(player_instance._on_dialogue_end)
 	var spawn_point: Node3D = get_node(player_spawn_point)
 	player_instance.global_position = spawn_point.global_position
 	animation_player.play(SPAWN_FADEIN_ANIMATION)

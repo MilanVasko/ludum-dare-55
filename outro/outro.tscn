@@ -53,8 +53,8 @@ text = "Thanks for playing!
 
 This game was created for Ludum Dare 55 in 48 hours by:
 
-EmaZuro - Writing, sounds, voice-acting
-Milan Vaško - Programming, music
+EmaZuro - Writing, sounds, voice-acting, music
+Milan Vaško - Programming
 NettlesCat - Graphics, level design"
 
 [node name="6" parent="Outro/Outro" instance=ExtResource("2_q3si0")]

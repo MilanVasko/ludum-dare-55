@@ -132,10 +132,6 @@ func find_interactable_object() -> Node:
 func _physics_process(delta: float) -> void:
 	var new_interactable_object := find_interactable_object()
 	update_reticle_if_necessary(new_interactable_object)
-	if new_interactable_object != null:
-		if Input.is_action_just_pressed("interact") and !immobile:
-			new_interactable_object._interact()
-			call_deferred("update_reticle", find_interactable_object())
 
 	current_speed = Vector3.ZERO.distance_to(get_real_velocity())
 
@@ -301,6 +297,14 @@ func headbob_animation(moving):
 		HEADBOB_ANIMATION.play("RESET", 0.25)
 		HEADBOB_ANIMATION.speed_scale = 1
 
+func interact_with_object() -> void:
+	current_interactable_object._interact()
+
+func _on_dialogue_start(dialogue_name: String) -> void:
+	immobile = true
+
+func _on_dialogue_end(dialogue_name: String) -> void:
+	immobile = false
 
 func _process(_delta: float) -> void:
 	HEAD.rotation.x = clamp(HEAD.rotation.x, deg_to_rad(-90), deg_to_rad(90))
@@ -311,6 +315,11 @@ func _process(_delta: float) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if current_interactable_object != null:
+		if Input.is_action_just_pressed("interact") and !immobile:
+			call_deferred("interact_with_object")
+			call_deferred("update_reticle", find_interactable_object())
+
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and !immobile:
 		HEAD.rotation_degrees.y -= event.relative.x * mouse_sensitivity
 		HEAD.rotation_degrees.x -= event.relative.y * mouse_sensitivity

@@ -15,18 +15,11 @@ func _input(event: InputEvent) -> void:
 
 func start_dialogue(dialogue_name: String) -> void:
 	visible = true
-	set_immobile(true)
-	emit_signal("dialogue_started", dialogue_name)
+	dialogue_started.emit(dialogue_name)
 
 func end_dialogue(dialogue_name: String) -> void:
 	visible = false
-	emit_signal("dialogue_ended", dialogue_name)
-	call_deferred("set_immobile", false)
-
-func set_immobile(value: bool) -> void:
-	var player := Global.find_player_or_null()
-	if player != null:
-		player.immobile = value
+	dialogue_ended.emit(dialogue_name)
 
 func play_dialogue_from_start(dialogue_name: String) -> void:
 	start_dialogue(dialogue_name)
