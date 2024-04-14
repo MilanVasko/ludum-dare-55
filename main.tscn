@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dlppbinr1xnif"]
+[gd_scene load_steps=42 format=3 uid="uid://dlppbinr1xnif"]
 
 [ext_resource type="PackedScene" uid="uid://dnsrkbvul38vs" path="res://inventory/inventory.tscn" id="2_jcjnj"]
 [ext_resource type="PackedScene" uid="uid://ce3aat668j4ib" path="res://demon/demon.tscn" id="2_w3v6w"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://cev5ksm2tjrpb" path="res://sky/sky.png" id="25_r0a3c"]
 [ext_resource type="PackedScene" uid="uid://cv0wx7bou1182" path="res://brochure/brochure.tscn" id="26_dskj8"]
 [ext_resource type="PackedScene" uid="uid://dmso0864hrb5j" path="res://letter/letter.tscn" id="28_6etjp"]
+[ext_resource type="PackedScene" uid="uid://c201d143dlbkq" path="res://lamp/lamp.tscn" id="29_4pvvp"]
 
 [sub_resource type="Animation" id="Animation_h6687"]
 length = 0.001
@@ -589,6 +590,18 @@ environment = ExtResource("6_u1hci")
 
 [node name="Letter" parent="." instance=ExtResource("28_6etjp")]
 transform = Transform3D(0.913886, 0, 0.405971, 0, 1, 0, -0.405971, 0, 0.913886, 7.17973, 0.600001, -9.38808)
+
+[node name="Lamp" parent="." instance=ExtResource("29_4pvvp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8172, 0.6, -9.45354)
+
+[node name="Lamp2" parent="." instance=ExtResource("29_4pvvp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.280707, 0.779863, -5.78784)
+
+[node name="Lamp3" parent="." instance=ExtResource("29_4pvvp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.81355, 0.779863, 0.72454)
+
+[node name="Lamp4" parent="." instance=ExtResource("29_4pvvp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3534, 0.779863, -2.29663)
 
 [connection signal="dialogue_ended" from="CanvasLayer/Dialogue" to="Intro" method="_on_dialogue_ended"]
 [connection signal="dialogue_text_appeared" from="CanvasLayer/Dialogue" to="Intro/IntroDemon2" method="_on_dialogue_text_appeared"]
