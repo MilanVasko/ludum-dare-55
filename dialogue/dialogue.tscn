@@ -233,6 +233,8 @@ anchors_preset = -1
 anchor_left = 0.2
 anchor_right = 0.8
 anchor_bottom = 1.0
+offset_top = 30.0
+offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -464,6 +466,8 @@ anchors_preset = -1
 anchor_left = 0.2
 anchor_right = 0.8
 anchor_bottom = 1.0
+offset_top = 30.0
+offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -520,3 +524,90 @@ offset_bottom = 0.0
 text = "CAT:
 Home? Oh, right, let's go..."
 dialogue_sound = 6
+
+[node name="DemonEtiquette" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_right = 0.8
+anchor_bottom = 1.0
+offset_left = -0.400009
+offset_top = 30.0
+offset_right = -0.600037
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" parent="DemonEtiquette" instance=ExtResource("2_skytx")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+text = "Etiquette for Demons 101:
+
+- Always be nice to each other.
+- Don't summon humans! They usually don't enjoy it.
+- If humans summon you, don't scare them and don't possess them. We're not animals.
+- No lurking on crossroads!
+- Don't speak with your mouth full.
+
+For lessons on Etiquette, you can call 666-341-684
+
+50 Demon coins/hour
+
+Sam Sam, your Demon-Etiquette expert"
+
+[node name="DemonRealmsHistory" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_right = 0.8
+anchor_bottom = 1.0
+offset_left = -0.400009
+offset_top = 30.0
+offset_right = -0.600037
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" parent="DemonRealmsHistory" instance=ExtResource("2_skytx")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+text = "Demon Realms history and reputation, a thesis.
+
+For a brief era in the Demon Realm history, in what we now call Dark era, or Hell era, this Realm was, as you all know, controlled by a demon named Pepi. Pepi was elected as the Prime Minister of Demon Realm in 15 973 and although his victory was democratic in a way, he promised things that were not real. By nasty populism he got the Demons on his side, renamed our realm to \"Hell\" and began agressive politics towards Human Realm.
+
+Ever since then, our Realm suffers from this \"Hell\" heritage, even though most of us agree it was a mistake and want to start positive diplomatic relations with Humans. That may not be easy since the fear of us is rooted in their culture and lifes.
+
+In this thesis I will..."
+
+[node name="GeographicAtlas" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_right = 0.8
+anchor_bottom = 1.0
+offset_left = -0.400009
+offset_top = 30.0
+offset_right = -0.600037
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" parent="GeographicAtlas" instance=ExtResource("2_skytx")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+text = "... The Demon realm is divided into 9 regions, that we call Circles. Each of those circles is unique in their traditions, culture and rules.
+
+It is important to know that there is no correlation between the Circles and the nature of its inhabitants.
+
+It is notable that there were humans who got summoned into our Realm, so the division into Circles is well known to them too.
+
+One of the most important human geographers is a man named Dante Alighieri, who was, in the Human Realm, a famous travel guide."
