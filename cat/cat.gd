@@ -18,7 +18,7 @@ func _on_dialogue_ended(dialogue_name: String) -> void:
 		animation_player.play("fade-out")
 		animation_player.animation_finished.connect(_on_animation_finished)
 
-func _on_dialogue_text_appeared(dialogue_name: String, current_dialogue_sound: DialogueText.DialogueSound) -> void:
+func _on_dialogue_text_appeared(_dialogue_name: String, current_dialogue_sound: DialogueText.DialogueSound) -> void:
 	if audio_player.playing:
 		audio_player.stop()
 	if current_dialogue_sound == dialogue_sound:

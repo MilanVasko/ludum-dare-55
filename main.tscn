@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dlppbinr1xnif"]
+[gd_scene load_steps=25 format=3 uid="uid://dlppbinr1xnif"]
 
 [ext_resource type="PackedScene" uid="uid://dnsrkbvul38vs" path="res://inventory/inventory.tscn" id="2_jcjnj"]
 [ext_resource type="PackedScene" uid="uid://ce3aat668j4ib" path="res://demon/demon.tscn" id="2_w3v6w"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bgef6v0ulw5ig" path="res://coin/coin.tscn" id="11_t6h88"]
 [ext_resource type="PackedScene" uid="uid://cjebao3g57b7m" path="res://book/book.tscn" id="12_orgyr"]
 [ext_resource type="PackedScene" uid="uid://bgwfi0678wk4y" path="res://wc/wc.tscn" id="13_a422t"]
+[ext_resource type="PackedScene" uid="uid://do2rscv6nfl15" path="res://bed/bed.tscn" id="15_k7obs"]
 
 [sub_resource type="Animation" id="Animation_h6687"]
 length = 0.001
@@ -404,6 +405,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.8131
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.81313, 0, 13.6027)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Bed" parent="." instance=ExtResource("15_k7obs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105545, 0, -7.88006)
 
 [connection signal="dialogue_ended" from="CanvasLayer/Dialogue" to="Intro" method="_on_dialogue_ended"]
 [connection signal="dialogue_text_appeared" from="CanvasLayer/Dialogue" to="Intro/IntroDemon2" method="_on_dialogue_text_appeared"]
