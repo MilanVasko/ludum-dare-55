@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://bf6ii78flmyge"]
+
+[ext_resource type="Texture2D" uid="uid://kmcm1ej1q2l5" path="res://bed/bed.png" id="1_y6uuv"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_qaih3"]
+frequency = 0.007
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3ylf6"]
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_qaih3")
+
+[resource]
+albedo_texture = ExtResource("1_y6uuv")
+metallic_specular = 0.0
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_3ylf6")
