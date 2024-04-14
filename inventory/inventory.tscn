@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnsrkbvul38vs"]
+[gd_scene load_steps=3 format=3 uid="uid://dnsrkbvul38vs"]
 
 [ext_resource type="Script" path="res://inventory/inventory.gd" id="1_wy3r8"]
+[ext_resource type="AudioStream" uid="uid://c56c7cp2hja5c" path="res://inventory/item_grab.wav" id="2_7djq6"]
 
 [node name="Inventory" type="Control" groups=["inventory"]]
 layout_mode = 3
@@ -28,3 +29,7 @@ text = "Coin"
 [node name="Fish" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "Fish"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_7djq6")
+bus = &"ItemGrab"
