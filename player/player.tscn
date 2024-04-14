@@ -408,6 +408,7 @@ LOOK_LEFT = "look_left"
 LOOK_RIGHT = "look_right"
 LOOK_UP = "look_up"
 LOOK_DOWN = "look_down"
+jumping_enabled = false
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
