@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dlppbinr1xnif"]
+[gd_scene load_steps=40 format=3 uid="uid://dlppbinr1xnif"]
 
 [ext_resource type="PackedScene" uid="uid://dnsrkbvul38vs" path="res://inventory/inventory.tscn" id="2_jcjnj"]
 [ext_resource type="PackedScene" uid="uid://ce3aat668j4ib" path="res://demon/demon.tscn" id="2_w3v6w"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://dho20flmpi3c3" path="res://dresser/dresser.tscn" id="23_b2f01"]
 [ext_resource type="PackedScene" uid="uid://b2xsq3x8ehh62" path="res://gate/gate.tscn" id="24_fqnev"]
 [ext_resource type="Texture2D" uid="uid://cev5ksm2tjrpb" path="res://unused-assets/sky.png" id="25_r0a3c"]
+[ext_resource type="PackedScene" uid="uid://cv0wx7bou1182" path="res://brochure/brochure.tscn" id="26_dskj8"]
 
 [sub_resource type="Animation" id="Animation_h6687"]
 length = 0.001
@@ -581,6 +582,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.990
 
 [node name="Gate3" parent="." instance=ExtResource("24_fqnev")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.99063, -5.96046e-08, 4.33656)
+
+[node name="Brochure" parent="." instance=ExtResource("26_dskj8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52269, 1.20303, 2.58591)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("6_u1hci")

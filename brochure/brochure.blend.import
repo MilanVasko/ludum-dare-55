@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://hmavuidplr04"
-path="res://.godot/imported/brochure.blend-2ed9926e48f75f9bbd08ae6a067b6598.scn"
+path="res://.godot/imported/brochure.blend-244bc55760af3f28597ab3f9eb0fb594.scn"
 
 [deps]
 
-source_file="res://unused-assets/raw-models/brochure.blend"
-dest_files=["res://.godot/imported/brochure.blend-2ed9926e48f75f9bbd08ae6a067b6598.scn"]
+source_file="res://brochure/brochure.blend"
+dest_files=["res://.godot/imported/brochure.blend-244bc55760af3f28597ab3f9eb0fb594.scn"]
 
 [params]
 

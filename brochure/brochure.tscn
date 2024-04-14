@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv0wx7bou1182"]
+
+[ext_resource type="Script" path="res://book/book.gd" id="1_2dxon"]
+[ext_resource type="PackedScene" uid="uid://hmavuidplr04" path="res://brochure/brochure.blend" id="1_irgj4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fvvf0"]
+size = Vector3(0.14, 0.01, 0.2)
+
+[node name="Brochure" type="StaticBody3D" groups=["interactable"]]
+script = ExtResource("1_2dxon")
+dialogue_name = "Brochure"
+
+[node name="brochure" parent="." instance=ExtResource("1_irgj4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_fvvf0")

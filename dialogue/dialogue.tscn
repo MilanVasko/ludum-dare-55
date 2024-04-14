@@ -611,3 +611,33 @@ It is important to know that there is no correlation between the Circles and the
 It is notable that there were humans who got summoned into our Realm, so the division into Circles is well known to them too.
 
 One of the most important human geographers is a man named Dante Alighieri, who was, in the Human Realm, a famous travel guide."
+
+[node name="Brochure" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_right = 0.8
+anchor_bottom = 1.0
+offset_left = -0.400009
+offset_top = 30.0
+offset_right = -0.600037
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" parent="Brochure" instance=ExtResource("2_skytx")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+text = "*written in a barely readable handwriting*
+
+Cats - Mrs. Baal lecture
+- super awesome apparently
+- can travel between realms (Sick)
+- like fish and meat (like me, lol)
+- many colors, more colors at once
+- sleep a lot
+- get belly rubs
+- OMG I WANNA BE A CAT"
