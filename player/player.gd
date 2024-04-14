@@ -300,10 +300,10 @@ func headbob_animation(moving):
 func interact_with_object() -> void:
 	current_interactable_object._interact()
 
-func _on_dialogue_start(dialogue_name: String) -> void:
+func _on_dialogue_start(_dialogue_name: String) -> void:
 	immobile = true
 
-func _on_dialogue_end(dialogue_name: String) -> void:
+func _on_dialogue_end(_dialogue_name: String) -> void:
 	immobile = false
 
 func _process(_delta: float) -> void:
