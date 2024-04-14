@@ -1,0 +1,16 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://c8urgtlr3y7do"]
+
+[ext_resource type="Texture2D" uid="uid://cev5ksm2tjrpb" path="res://unused-assets/sky.png" id="1_gng54"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ncfba"]
+panorama = ExtResource("1_gng54")
+
+[sub_resource type="Sky" id="Sky_kgor4"]
+sky_material = SubResource("PanoramaSkyMaterial_ncfba")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_kgor4")
+ambient_light_source = 3
+reflected_light_source = 2
+tonemap_mode = 2

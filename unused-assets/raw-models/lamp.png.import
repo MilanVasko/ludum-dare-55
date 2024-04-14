@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cev5ksm2tjrpb"
-path.s3tc="res://.godot/imported/sky.png-ed34d0558e347d7aed4bfff926645156.s3tc.ctex"
+uid="uid://ccrl5w5rxnu2c"
+path.s3tc="res://.godot/imported/lamp.png-353e3177dac233a418e4e0f679ae249b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://unused-assets/sky.png"
-dest_files=["res://.godot/imported/sky.png-ed34d0558e347d7aed4bfff926645156.s3tc.ctex"]
+source_file="res://unused-assets/raw-models/lamp.png"
+dest_files=["res://.godot/imported/lamp.png-353e3177dac233a418e4e0f679ae249b.s3tc.ctex"]
 
 [params]
 

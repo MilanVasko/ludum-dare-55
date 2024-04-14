@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dlppbinr1xnif"]
+[gd_scene load_steps=39 format=3 uid="uid://dlppbinr1xnif"]
 
 [ext_resource type="PackedScene" uid="uid://dnsrkbvul38vs" path="res://inventory/inventory.tscn" id="2_jcjnj"]
 [ext_resource type="PackedScene" uid="uid://ce3aat668j4ib" path="res://demon/demon.tscn" id="2_w3v6w"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c6j478r8yurra" path="res://player/player.tscn" id="3_mj1x0"]
 [ext_resource type="Script" path="res://intro/intro.gd" id="4_nwsjy"]
 [ext_resource type="PackedScene" uid="uid://dwkgjdjsthqh0" path="res://pamphlet/pamphlet.tscn" id="6_g0mvp"]
+[ext_resource type="Environment" uid="uid://c8urgtlr3y7do" path="res://environment.tres" id="6_u1hci"]
 [ext_resource type="PackedScene" uid="uid://jhg3kkc7llyy" path="res://aaiv/aaiv.tscn" id="7_6mpdc"]
 [ext_resource type="PackedScene" uid="uid://bqegmxmfh7fia" path="res://plant/plant.tscn" id="7_s1ekp"]
 [ext_resource type="PackedScene" uid="uid://bjxtjo820xqp6" path="res://plant-destination/plant-destination.tscn" id="9_ab58n"]
@@ -24,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://nitlcvsrsu6e" path="res://table/table.tscn" id="22_57h4m"]
 [ext_resource type="PackedScene" uid="uid://dho20flmpi3c3" path="res://dresser/dresser.tscn" id="23_b2f01"]
 [ext_resource type="PackedScene" uid="uid://b2xsq3x8ehh62" path="res://gate/gate.tscn" id="24_fqnev"]
+[ext_resource type="Texture2D" uid="uid://cev5ksm2tjrpb" path="res://unused-assets/sky.png" id="25_r0a3c"]
 
 [sub_resource type="Animation" id="Animation_h6687"]
 length = 0.001
@@ -327,7 +329,18 @@ _data = {
 "summoning-fadeout": SubResource("Animation_mno2o")
 }
 
-[sub_resource type="Environment" id="Environment_47x45"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ncfba"]
+panorama = ExtResource("25_r0a3c")
+
+[sub_resource type="Sky" id="Sky_kgor4"]
+sky_material = SubResource("PanoramaSkyMaterial_ncfba")
+
+[sub_resource type="Environment" id="Environment_fipfs"]
+background_mode = 2
+sky = SubResource("Sky_kgor4")
+ambient_light_source = 3
+reflected_light_source = 2
+tonemap_mode = 2
 adjustment_enabled = true
 adjustment_saturation = 0.37
 
@@ -370,8 +383,8 @@ transform = Transform3D(0.275721, 0, -0.961238, 0, 1, 0, 0.961238, 0, 0.275721, 
 dialogue_sound = 2
 
 [node name="IntroCamera" type="Camera3D" parent="Intro"]
-transform = Transform3D(-0.733116, -0.223079, 0.642477, 0, 0.944675, 0.328008, -0.680104, 0.240468, -0.692556, 8.64223, 2.70347, -8.04152)
-environment = SubResource("Environment_47x45")
+transform = Transform3D(-0.733116, -0.223079, 0.642477, 0, 0.944675, 0.328008, -0.680104, 0.240468, -0.692556, 9.6101, 2.48311, -7.15003)
+environment = SubResource("Environment_fipfs")
 current = true
 
 [node name="IntroDemon" parent="Intro" instance=ExtResource("2_w3v6w")]
@@ -568,6 +581,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.990
 
 [node name="Gate3" parent="." instance=ExtResource("24_fqnev")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.99063, -5.96046e-08, 4.33656)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("6_u1hci")
 
 [connection signal="dialogue_ended" from="CanvasLayer/Dialogue" to="Intro" method="_on_dialogue_ended"]
 [connection signal="dialogue_text_appeared" from="CanvasLayer/Dialogue" to="Intro/IntroDemon2" method="_on_dialogue_text_appeared"]
