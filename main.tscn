@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dlppbinr1xnif"]
+[gd_scene load_steps=34 format=3 uid="uid://dlppbinr1xnif"]
 
 [ext_resource type="PackedScene" uid="uid://dnsrkbvul38vs" path="res://inventory/inventory.tscn" id="2_jcjnj"]
 [ext_resource type="PackedScene" uid="uid://ce3aat668j4ib" path="res://demon/demon.tscn" id="2_w3v6w"]
@@ -18,6 +18,12 @@
 [ext_resource type="PackedScene" uid="uid://d34t5e1ebxyjm" path="res://door/door_c.tscn" id="16_pbf13"]
 [ext_resource type="PackedScene" uid="uid://dmnbh3faorbm6" path="res://door/door_a.tscn" id="17_02m3u"]
 [ext_resource type="PackedScene" uid="uid://dallal2jxag60" path="res://door/door_b.tscn" id="18_ohg4x"]
+[ext_resource type="PackedScene" uid="uid://nwj7868h1qwq" path="res://window/window.tscn" id="19_tk2lm"]
+[ext_resource type="PackedScene" uid="uid://foviuhehdmm6" path="res://candle/candle.tscn" id="20_jwqw4"]
+[ext_resource type="PackedScene" uid="uid://b7b5rqqihpwmd" path="res://closet/closet.tscn" id="21_rjwng"]
+[ext_resource type="PackedScene" uid="uid://nitlcvsrsu6e" path="res://table/table.tscn" id="22_57h4m"]
+[ext_resource type="PackedScene" uid="uid://dho20flmpi3c3" path="res://dresser/dresser.tscn" id="23_b2f01"]
+[ext_resource type="PackedScene" uid="uid://b2xsq3x8ehh62" path="res://gate/gate.tscn" id="24_fqnev"]
 
 [sub_resource type="Animation" id="Animation_h6687"]
 length = 0.001
@@ -425,6 +431,42 @@ opened_angle = -90.0
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 9.06575, 0, 7.335)
 closed_angle = -180.0
 opened_angle = -90.0
+
+[node name="Window" parent="." instance=ExtResource("19_tk2lm")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11.3833, 0.528225, 4.8356)
+
+[node name="Candle" parent="." instance=ExtResource("20_jwqw4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.08061, 0, -3.74588)
+
+[node name="Candle2" parent="." instance=ExtResource("20_jwqw4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.05482, 4.76837e-07, -5.76897)
+
+[node name="Candle3" parent="." instance=ExtResource("20_jwqw4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9882, 0, -3.68354)
+
+[node name="Closet" parent="." instance=ExtResource("21_rjwng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.55606, 2.38419e-07, -9.10883)
+
+[node name="Table" parent="." instance=ExtResource("22_57h4m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49821, 0, -5.35344)
+
+[node name="Dresser" parent="." instance=ExtResource("23_b2f01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.49288, 4.76837e-07, -8.50661)
+
+[node name="Gate" parent="." instance=ExtResource("24_fqnev")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.99063, -5.96046e-08, 6.33656)
+closed_angle = 90.0
+opened_angle = 180.0
+
+[node name="Gate2" parent="." instance=ExtResource("24_fqnev")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.99063, -5.96046e-08, 5.33656)
+closed_angle = 90.0
+opened_angle = 180.0
+
+[node name="Gate3" parent="." instance=ExtResource("24_fqnev")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.99063, -5.96046e-08, 4.33656)
+closed_angle = 90.0
+opened_angle = 180.0
 
 [connection signal="dialogue_ended" from="CanvasLayer/Dialogue" to="Intro" method="_on_dialogue_ended"]
 [connection signal="dialogue_text_appeared" from="CanvasLayer/Dialogue" to="Intro/IntroDemon2" method="_on_dialogue_text_appeared"]

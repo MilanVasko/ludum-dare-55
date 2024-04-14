@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0jupe8xgirmh"
-path.s3tc="res://.godot/imported/closet.png-d43d6b8a29b3532419f31525ad84c251.s3tc.ctex"
+uid="uid://c8aqndnkfesfy"
+path.s3tc="res://.godot/imported/window.png-e1a0ab45a5067a88209aa01dc9496e56.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://unused-assets/raw-models/closet.png"
-dest_files=["res://.godot/imported/closet.png-d43d6b8a29b3532419f31525ad84c251.s3tc.ctex"]
+source_file="res://window/window.png"
+dest_files=["res://.godot/imported/window.png-e1a0ab45a5067a88209aa01dc9496e56.s3tc.ctex"]
 
 [params]
 

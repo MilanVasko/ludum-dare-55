@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://nwj7868h1qwq"]
+
+[ext_resource type="PackedScene" uid="uid://cib1js7usgbjw" path="res://window/window.blend" id="1_eyo02"]
+
+[node name="Window" type="Node3D"]
+
+[node name="window" parent="." instance=ExtResource("1_eyo02")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bvnm4orbsgb7n"
-path="res://.godot/imported/candle.blend-76056e5fce79da24d2cb0e2d99e1a5a8.scn"
+uid="uid://uyj4tdxlcrbc"
+path="res://.godot/imported/gate.blend-2ad4d1ecd3662bd3543e38d6ae4fd44e.scn"
 
 [deps]
 
-source_file="res://unused-assets/raw-models/candle.blend"
-dest_files=["res://.godot/imported/candle.blend-76056e5fce79da24d2cb0e2d99e1a5a8.scn"]
+source_file="res://gate/gate.blend"
+dest_files=["res://.godot/imported/gate.blend-2ad4d1ecd3662bd3543e38d6ae4fd44e.scn"]
 
 [params]
 

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dho20flmpi3c3"]
+
+[ext_resource type="PackedScene" uid="uid://bv4tq2qasagbg" path="res://dresser/dresser.blend" id="1_ffmp0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n27gf"]
+size = Vector3(1, 0.6, 0.5)
+
+[node name="Dresser" type="StaticBody3D"]
+
+[node name="dresser" parent="." instance=ExtResource("1_ffmp0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+shape = SubResource("BoxShape3D_n27gf")

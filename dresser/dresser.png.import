@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8aqndnkfesfy"
-path.s3tc="res://.godot/imported/window.png-f0522988a60d3763dd37611281f63c3f.s3tc.ctex"
+uid="uid://bss1fuixs57b7"
+path.s3tc="res://.godot/imported/dresser.png-8e27799b2a0200e07fb5dc845e0cae33.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://unused-assets/raw-models/window.png"
-dest_files=["res://.godot/imported/window.png-f0522988a60d3763dd37611281f63c3f.s3tc.ctex"]
+source_file="res://dresser/dresser.png"
+dest_files=["res://.godot/imported/dresser.png-8e27799b2a0200e07fb5dc845e0cae33.s3tc.ctex"]
 
 [params]
 

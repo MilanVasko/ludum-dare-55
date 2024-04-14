@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://tu7rpcp347ga"
-path="res://.godot/imported/closet.blend-4c0568b555a107f1c79b14548b0b7b1b.scn"
+path="res://.godot/imported/closet.blend-24bca251d377220ee6bceec5c7b82beb.scn"
 
 [deps]
 
-source_file="res://unused-assets/raw-models/closet.blend"
-dest_files=["res://.godot/imported/closet.blend-4c0568b555a107f1c79b14548b0b7b1b.scn"]
+source_file="res://closet/closet.blend"
+dest_files=["res://.godot/imported/closet.blend-24bca251d377220ee6bceec5c7b82beb.scn"]
 
 [params]
 
