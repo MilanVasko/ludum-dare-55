@@ -393,11 +393,8 @@ current = true
 transform = Transform3D(0.157296, 0, 0.987551, 0, 1, 0, -0.987551, 0, 0.157296, 5.57133, 0, 3.46655)
 dialogue_sound = 3
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.353, 1.81156, -3.26165)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="OmniLight3D"]
-transform = Transform3D(0.986234, -0.0711491, -0.149268, 0.165357, 0.424352, 0.890271, 0, -0.902698, 0.430275, 0, 11.899, 30.5669)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.986234, -0.071149, -0.149267, 0.165357, 0.424352, 0.890271, 0, -0.902698, 0.430275, 3.353, 13.7106, 27.3053)
 shadow_enabled = true
 
 [node name="Dorms" parent="." instance=ExtResource("3_edpwd")]

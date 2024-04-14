@@ -1,14 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://dallal2jxag60"]
+[gd_scene load_steps=12 format=3 uid="uid://dallal2jxag60"]
 
 [ext_resource type="PackedScene" uid="uid://ci5k0r4qdy3nr" path="res://door/door_b.blend" id="1_ogx3n"]
 [ext_resource type="Script" path="res://door/door.gd" id="1_y6uj4"]
+[ext_resource type="AudioStream" uid="uid://dr7gdqejjpgeg" path="res://door/open1.wav" id="2_ymygf"]
+[ext_resource type="AudioStream" uid="uid://cuqqtn6b2s88d" path="res://door/open2.wav" id="3_d3m1r"]
+[ext_resource type="AudioStream" uid="uid://da4b30imygbiu" path="res://door/open3.wav" id="4_epofg"]
+[ext_resource type="AudioStream" uid="uid://cotfp06fop136" path="res://door/open4.wav" id="5_hv05m"]
+[ext_resource type="AudioStream" uid="uid://dwwi37k6bocl6" path="res://door/close1.wav" id="6_pyvw0"]
+[ext_resource type="AudioStream" uid="uid://lss1bngtl4u" path="res://door/close2.wav" id="7_06hst"]
+[ext_resource type="AudioStream" uid="uid://c4gxnpmhre26d" path="res://door/close3.wav" id="8_1tfs5"]
+[ext_resource type="AudioStream" uid="uid://d17saj31b1w55" path="res://door/close4.wav" id="9_fe542"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yxd2m"]
 size = Vector3(1, 2, 0.02)
 
 [node name="DoorB" type="AnimatableBody3D" groups=["interactable"]]
 script = ExtResource("1_y6uj4")
-time_to_change = 0.3
+time_to_change = 0.2
+open_sound_clips = Array[AudioStream]([ExtResource("2_ymygf"), ExtResource("3_d3m1r"), ExtResource("4_epofg"), ExtResource("5_hv05m")])
+close_sound_clips = Array[AudioStream]([ExtResource("6_pyvw0"), ExtResource("7_06hst"), ExtResource("8_1tfs5"), ExtResource("9_fe542")])
 
 [node name="door_b" parent="." instance=ExtResource("1_ogx3n")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.5, 0, 2.18557e-08)
@@ -16,3 +26,6 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.5, 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, 0)
 shape = SubResource("BoxShape3D_yxd2m")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+bus = &"Sounds"
