@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dlppbinr1xnif"]
+[gd_scene load_steps=35 format=3 uid="uid://dlppbinr1xnif"]
 
 [ext_resource type="PackedScene" uid="uid://dnsrkbvul38vs" path="res://inventory/inventory.tscn" id="2_jcjnj"]
 [ext_resource type="PackedScene" uid="uid://ce3aat668j4ib" path="res://demon/demon.tscn" id="2_w3v6w"]
@@ -327,6 +327,10 @@ _data = {
 "summoning-fadeout": SubResource("Animation_mno2o")
 }
 
+[sub_resource type="Environment" id="Environment_47x45"]
+adjustment_enabled = true
+adjustment_saturation = 0.37
+
 [node name="Main" type="Node3D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -367,6 +371,7 @@ dialogue_sound = 2
 
 [node name="IntroCamera" type="Camera3D" parent="Intro"]
 transform = Transform3D(-0.733116, -0.223079, 0.642477, 0, 0.944675, 0.328008, -0.680104, 0.240468, -0.692556, 8.64223, 2.70347, -8.04152)
+environment = SubResource("Environment_47x45")
 current = true
 
 [node name="IntroDemon" parent="Intro" instance=ExtResource("2_w3v6w")]
