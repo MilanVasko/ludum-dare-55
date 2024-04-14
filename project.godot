@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Ludum Dare 55"
+config/name="Advanced Algebra IV"
 run/main_scene="res://pre-intro/pre-intro.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [autoload]
 
