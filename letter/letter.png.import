@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0dxsp50hfuj7"
-path.s3tc="res://.godot/imported/letter.png-372e3821e730eae8bc27fdedef44b508.s3tc.ctex"
+path.s3tc="res://.godot/imported/letter.png-1537e36cb0f4e2c28f2e4c0c713c5e10.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://unused-assets/raw-models/letter.png"
-dest_files=["res://.godot/imported/letter.png-372e3821e730eae8bc27fdedef44b508.s3tc.ctex"]
+source_file="res://letter/letter.png"
+dest_files=["res://.godot/imported/letter.png-1537e36cb0f4e2c28f2e4c0c713c5e10.s3tc.ctex"]
 
 [params]
 

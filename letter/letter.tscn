@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmso0864hrb5j"]
+
+[ext_resource type="Script" path="res://book/book.gd" id="1_fxa6k"]
+[ext_resource type="PackedScene" uid="uid://dwqkd0thu1ysp" path="res://letter/letter.blend" id="1_o18nr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nd2rc"]
+size = Vector3(0.14, 0.01, 0.2)
+
+[node name="Letter" type="StaticBody3D" groups=["interactable"]]
+script = ExtResource("1_fxa6k")
+dialogue_name = "Letter"
+
+[node name="letter" parent="." instance=ExtResource("1_o18nr")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_nd2rc")

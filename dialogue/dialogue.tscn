@@ -641,3 +641,31 @@ Cats - Mrs. Baal lecture
 - sleep a lot
 - get belly rubs
 - OMG I WANNA BE A CAT"
+
+[node name="Letter" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_right = 0.8
+anchor_bottom = 1.0
+offset_left = -0.400009
+offset_top = 30.0
+offset_right = -0.600037
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" parent="Letter" instance=ExtResource("2_skytx")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+text = "Dear Levi,
+
+I miss you. Hope you're enjoying college. My Demon studies are going well, but I am looking forward to leaving the 5th Circle and going home.
+Will you be back for this Solstice? That would be awesome.
+
+Anyways, I miss you.
+
+Beelz"
