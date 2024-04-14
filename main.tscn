@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dnsrkbvul38vs" path="res://inventory/inventory.tscn" id="2_jcjnj"]
 [ext_resource type="PackedScene" uid="uid://ce3aat668j4ib" path="res://demon/demon.tscn" id="2_w3v6w"]
 [ext_resource type="PackedScene" uid="uid://cddipiraa3s0k" path="res://dialogue/dialogue.tscn" id="3_d8vpw"]
-[ext_resource type="PackedScene" uid="uid://c2txtr2som7sk" path="res://dorms/dorms.tscn" id="3_edpwd"]
+[ext_resource type="PackedScene" uid="uid://d0q7uuppssnjq" path="res://dorms/dorms.tscn" id="3_edpwd"]
 [ext_resource type="PackedScene" uid="uid://c6j478r8yurra" path="res://player/player.tscn" id="3_mj1x0"]
 [ext_resource type="Script" path="res://intro/intro.gd" id="4_nwsjy"]
 [ext_resource type="PackedScene" uid="uid://dwkgjdjsthqh0" path="res://pamphlet/pamphlet.tscn" id="6_g0mvp"]
@@ -380,6 +380,15 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 10.1769, 0.803496, -3.3
 
 [node name="Book" parent="." instance=ExtResource("12_orgyr")]
 transform = Transform3D(0.562675, 0, -0.826678, 0, 1, 0, 0.826678, 0, 0.562675, 10.4376, 0.77767, -6.94063)
+dialogue_name = "DemonEtiquette"
+
+[node name="Book2" parent="." instance=ExtResource("12_orgyr")]
+transform = Transform3D(-0.131893, 0, -0.991264, 0, 1, 0, 0.991264, 0, -0.131893, 10.4122, 0.77767, -2.8075)
+dialogue_name = "DemonRealmsHistory"
+
+[node name="Book3" parent="." instance=ExtResource("12_orgyr")]
+transform = Transform3D(0.388883, 0, -0.921287, 0, 1, 0, 0.921287, 0, 0.388883, 3.47093, 0.77767, 0.794114)
+dialogue_name = "GeographicAtlas"
 
 [node name="Wc6" type="Node" parent="."]
 
