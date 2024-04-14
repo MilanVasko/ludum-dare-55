@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjebao3g57b7m"]
+
+[ext_resource type="PackedScene" uid="uid://l806rlnnlfta" path="res://book/book.blend" id="1_p3opi"]
+
+[node name="Book" type="Node3D"]
+
+[node name="book" parent="." instance=ExtResource("1_p3opi")]
+transform = Transform3D(7.64274e-15, 1.74846e-07, -4, 4, -1.74846e-07, 0, -1.74846e-07, -4, -1.74846e-07, 0, 0.02, 0)

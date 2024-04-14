@@ -19,10 +19,6 @@ config/icon="res://icon.svg"
 
 Global="*res://global/global.tscn"
 
-[filesystem]
-
-import/blender/enabled=false
-
 [input]
 
 sprint={
